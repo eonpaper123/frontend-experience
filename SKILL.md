@@ -51,6 +51,8 @@ For `Liquid Glass`, `glassmorphism`, frosted glass, translucent navigation, or g
 
 Specialists contribute within the user's brief and established direction. Their stack preferences, aesthetic defaults, and fixed numeric heuristics do not justify changing the project or claiming platform facts without verification.
 
+Every named external skill, tool, service, and provider below is optional unless the user's task explicitly requires that exact capability. Discover whether it is actually available before relying on it. When it is absent, continue with this skill's included core and references plus the project's existing components, platform APIs, and toolchain. Do not claim missing research or provider-backed work, and do not silently change a required outcome, asset source, provider, format, or production dependency. Report the exact missing capability only when it is essential to complete or verify the requested result.
+
 | Need | Use |
 | --- | --- |
 | Reference-led web/product-screen design | `refero-design` for research and synthesis, proportional to the missing decisions. |
