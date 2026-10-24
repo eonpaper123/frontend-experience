@@ -45,6 +45,8 @@ For edge-to-edge mobile web, hybrid, or native layouts that can meet device cuto
 
 For a new or substantially revised responsive type system, read [references/responsive-typography.md](references/responsive-typography.md). Keep semantic heading structure separate from visual type roles, and derive scale, measure, spacing, and breakpoints from the actual language, font, content, accessibility needs, and container rather than copying a specimen's numeric ladder.
 
+For popup or overlay selection—Modal, Drawer, Toast, Dropdown, Popover, or Tooltip—read [references/six-popup-types.md](references/six-popup-types.md). Choose by task, interruption, and interaction semantics; visual shape does not determine modality or keyboard behavior.
+
 For `Liquid Glass`, `glassmorphism`, frosted glass, translucent navigation, or glass cards, read [the glass-material selection recipe](references/technology-selection.md#select-glass-materials-by-mechanism). Distinguish native platform material, CSS backdrop blur, and real refraction before choosing an implementation; keep the existing platform and let content, state, and contrast outrank the effect.
 
 ## Assign specialist work without competing directions
@@ -105,6 +107,8 @@ For component motion timing or token review, read [references/component-motion-t
 ## Preserve continuity in stateful motion
 
 Treat advanced card, button, layout, and gesture motion as a state transition rather than a collection of keyframes. Before implementation, identify the source state, destination state, spatial anchor, commit/cancel conditions, and reverse path. The user should be able to answer: where did it come from, what did it become, and where did it go?
+
+For completion bursts, linked page feedback, stacked-card fans, snap-and-draw sequences, inertial wheels, or circular page reveals, read [references/six-app-interactions.md](references/six-app-interactions.md). Reuse the stateful-motion rules and Advanced Interaction Techniques table there instead of duplicating their mechanics.
 
 - **Anchored reveal and return:** derive the transform origin or reveal geometry from the invoking control, including its actual press point when that is meaningful. Open and close through the same relationship. Animate the shell and content separately: keep text and detailed content visually stable with a bounded inverse-scale layer or geometry animation, and reveal it after the shell has enough room. A spring may overshoot when it reinforces emergence, but the source, target, and return path matter more than bounce.
 - **One control, several semantic states:** for actions such as submit, keep one control in place while it moves through idle, pressed, pending, and success states. Preserve its layout footprint, prevent duplicate activation, expose pending/success semantics, and animate the progress and completion mark inside the same object. Do not use a navigation or modal to imitate a control transformation.

@@ -22,6 +22,8 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
 - [`references/safe-area-layout.md`](references/safe-area-layout.md): safe-area ownership for web, hybrid, and native layouts.
+- [`references/six-popup-types.md`](references/six-popup-types.md): task-led selection and semantic contracts for six popup and overlay patterns.
+- [`references/six-app-interactions.md`](references/six-app-interactions.md): six connected action-feedback and stateful-motion patterns.
 - [`references/six-component-interactions.md`](references/six-component-interactions.md): six stateful app and Mini Program interaction recipes.
 
 There are no scripts, runtime packages, generated assets, model credentials, or required MCP servers in this repository. The core workflow works with ordinary file inspection, editing, the project's existing toolchain, and direct runtime observation.
@@ -164,8 +166,10 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | Profile, team, speaker, or personal card composition | [`profile-card-layouts.md`](references/profile-card-layouts.md) | A layout selected by content priority, not by decorative preference |
 | New or revised responsive type system | [`responsive-typography.md`](references/responsive-typography.md) | Semantic roles, fluid/container behavior, line measure, language and zoom acceptance |
 | Edge-to-edge mobile, hybrid, or native layout | [`safe-area-layout.md`](references/safe-area-layout.md) | One owner per inset, orientation/keyboard checks, no hard-coded device table |
+| Modal, drawer, toast, dropdown, popover, or tooltip selection | [`six-popup-types.md`](references/six-popup-types.md) | Task and modality choice, semantic role, focus/closing contract, recoverable feedback |
 | Vague animation description or named motion effect | [`motion-description-vocabulary.md`](references/motion-description-vocabulary.md) | Trigger, subject, path, state outcome, reverse/cancel behavior, input modes |
 | Component timing or motion-token audit | [`component-motion-tokens.md`](references/component-motion-tokens.md) | Semantic token mapping with interruption and reduced-motion checks |
+| Completion burst, linked feedback, stacked fan, snap cards, inertial wheel, or circular reveal | [`six-app-interactions.md`](references/six-app-interactions.md) | Authoritative state, one motion owner, interruption/reversal behavior, target-surface acceptance |
 | App or Mini Program component behavior | [`six-component-interactions.md`](references/six-component-interactions.md) | Authoritative state, keyboard/touch parity, settlement and announcement behavior |
 | Rendering, 2D/3D, generated media, glass, scroll video, or advanced interaction choice | [`technology-selection.md`](references/technology-selection.md) | Chosen layer, important constraint, dependency/asset boundary, runtime proof |
 
