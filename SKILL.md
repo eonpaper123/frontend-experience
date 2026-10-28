@@ -74,6 +74,14 @@ Read only the relevant specialist instructions. Do not load entire skill familie
 
 ## Select the implementation
 
+### Reuse component source before writing new UI
+
+For every UI component task, including small changes, first make a targeted search of the project's component directories, this skill's `references/`, the host's available skill catalog or source assets, and relevant reusable component sources that are actually available to the task. Prefer an existing component or the smallest suitable adaptation over writing from scratch; search by the requested behavior and target framework rather than scanning every library in full.
+
+Before adopting a candidate, inspect its actual source, license, dependencies, platform fit, and accessibility against the project. A reference, preview, or skill is not necessarily reusable component source. Preserve required notices and obtain any required dependency authorization. If no suitable source exists, or a candidate is unsuitable, briefly state the concrete reason in the existing task notes before authoring new code; no separate report is needed.
+
+In the delivery summary, name the reused source, material adaptations, and applicable license boundary, or explain why new code was necessary. Reuse does not replace the skill's real-surface verification gate or authorize installation, migration, or publication.
+
 When the experience needs a technology choice, read [references/technology-selection.md](references/technology-selection.md). Existing frameworks are neither disposable nor untouchable: change a layer only for a concrete capability need, explain the cost, and keep the work within the requested scope.
 
 Choose the rendering and interaction layer from the desired experience, asset workflow, target devices, accessibility, runtime cost, and delivery constraints. A new library being installed globally as a skill does not install a runtime into the product.
@@ -81,6 +89,8 @@ Choose the rendering and interaction layer from the desired experience, asset wo
 Build the smallest usable slice that demonstrates the central interaction. Preserve unrelated work, product contracts, and project ownership. Resolve conflicting animation ownership rather than letting two libraries update the same property independently.
 
 ### Use community component snippets selectively
+
+For ReactDrops, AI-ready component briefs, Showcase Pointer, Refracted Text, Fractal Glass, Liquid Glass Logo, or Liquid Glass Orb, read [references/reactdrops-component-patterns.md](references/reactdrops-component-patterns.md). Select one fitting drop, verify its source and custom license, and adapt the brief to the existing project; this does not install a component or replace the motion and glass rules.
 
 - Inspect the project's existing components and design system first. Use [Uiverse](https://uiverse.io/) as an optional source for one small, generic web element when selective adaptation is cheaper than building it locally; do not import the catalog or let a decorative snippet define product behavior.
 - The site advertises HTML/CSS, Tailwind, React, and Figma outputs, while its [Galaxy repository](https://github.com/uiverse-io/galaxy) describes CSS/Tailwind elements. Verify the chosen element and output actually exist, review all markup, styles, scripts, and dependencies, then adapt them to the project's framework and tokens. Scope generic selectors, custom properties, and keyframe names so copied CSS does not leak across the application.

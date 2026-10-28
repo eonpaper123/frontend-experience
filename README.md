@@ -20,6 +20,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
 - [`references/dashboard-composition.md`](references/dashboard-composition.md): composition patterns and acceptance checks for dense data surfaces.
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
+- [`references/reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md): source, license, dependency, and runtime checks for selective ReactDrops reuse.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
 - [`references/safe-area-layout.md`](references/safe-area-layout.md): safe-area ownership for web, hybrid, and native layouts.
 - [`references/six-popup-types.md`](references/six-popup-types.md): task-led selection and semantic contracts for six popup and overlay patterns.
@@ -164,6 +165,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | --- | --- | --- |
 | Dashboard, analytics, operations console, dense admin surface | [`dashboard-composition.md`](references/dashboard-composition.md) | Decision-led hierarchy, representative data states, density and navigation acceptance |
 | Profile, team, speaker, or personal card composition | [`profile-card-layouts.md`](references/profile-card-layouts.md) | A layout selected by content priority, not by decorative preference |
+| Distinctive React hero, portfolio feature, product card, or agent-state visual with no suitable project component | [`reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md) | One source-verified candidate, dependency and custom-license boundary, project-specific adaptation, target-runtime acceptance |
 | New or revised responsive type system | [`responsive-typography.md`](references/responsive-typography.md) | Semantic roles, fluid/container behavior, line measure, language and zoom acceptance |
 | Edge-to-edge mobile, hybrid, or native layout | [`safe-area-layout.md`](references/safe-area-layout.md) | One owner per inset, orientation/keyboard checks, no hard-coded device table |
 | Modal, drawer, toast, dropdown, popover, or tooltip selection | [`six-popup-types.md`](references/six-popup-types.md) | Task and modality choice, semantic role, focus/closing contract, recoverable feedback |
