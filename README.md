@@ -18,7 +18,9 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/technology-selection.md`](references/technology-selection.md): rendering, 2D/3D, motion, canvas, media, and interaction-layer choices.
 - [`references/motion-description-vocabulary.md`](references/motion-description-vocabulary.md): turns conversational motion language into testable behavior contracts.
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
+- [`references/color-pair-palette.md`](references/color-pair-palette.md): eight optional contrasting color pairs with role, contrast, and print boundaries.
 - [`references/dashboard-composition.md`](references/dashboard-composition.md): composition patterns and acceptance checks for dense data surfaces.
+- [`references/de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md): a scoped critique for generic generated-looking business UI.
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
 - [`references/reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md): source, license, dependency, and runtime checks for selective ReactDrops reuse.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
@@ -163,7 +165,9 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 
 | Task signal | Load | Output expected |
 | --- | --- | --- |
+| No explicit color direction and no governing brand or project palette | [`color-pair-palette.md`](references/color-pair-palette.md) | One role-assigned candidate pair, preserved semantic colors, and measured foreground/background contrast |
 | Dashboard, analytics, operations console, dense admin surface | [`dashboard-composition.md`](references/dashboard-composition.md) | Decision-led hierarchy, representative data states, density and navigation acceptance |
+| De-AI UI critique, generic generated-looking UI, or business-dashboard polish | [`de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md) | A scoped correction that preserves brand, accessibility, useful density, project style, and truthful data |
 | Profile, team, speaker, or personal card composition | [`profile-card-layouts.md`](references/profile-card-layouts.md) | A layout selected by content priority, not by decorative preference |
 | Distinctive React hero, portfolio feature, product card, or agent-state visual with no suitable project component | [`reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md) | One source-verified candidate, dependency and custom-license boundary, project-specific adaptation, target-runtime acceptance |
 | New or revised responsive type system | [`responsive-typography.md`](references/responsive-typography.md) | Semantic roles, fluid/container behavior, line measure, language and zoom acceptance |

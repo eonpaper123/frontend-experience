@@ -37,7 +37,11 @@ Use `refero-design` for reference research and synthesis on substantial web or p
 
 Lock an actionable direction before building: primary reference or existing system, traits to preserve, required states, asset strategy, and meaningful deviations. A short explanation or an update to an existing project design document is enough. Do not create a separate document for every component change.
 
+When no color direction is specified and no existing brand or project palette governs the surface, choose one pair from [references/color-pair-palette.md](references/color-pair-palette.md). Treat it as a candidate pool instead of inventing a generic purple-blue gradient; preserve semantic colors and measure the actual foreground/background contrast before adoption.
+
 For a dashboard, analytics workspace, operations console, or data-heavy admin surface, read [references/dashboard-composition.md](references/dashboard-composition.md). Establish the user decisions and data semantics first, then ask where the visual weight lands, who or what receives the first screen, and what can be removed without losing meaning. Its eight examples and percentages are source observations for comparison, not universal style tokens or layout quotas.
+
+For de-AI UI critique, generic generated-looking UI, or template-like business-dashboard polish, read [references/de-ai-ui-checklist.md](references/de-ai-ui-checklist.md). Apply its checks to the changed surface even for a small UI task; preserve the brand, accessibility, useful density, project style, and real data instead of imposing a neutral-gray preset.
 
 For profile cards, team pages, or personal introductions, read [references/profile-card-layouts.md](references/profile-card-layouts.md) when layout direction is needed. Select by content priority; the twelve examples are alternatives, not a mandatory monochrome style.
 
