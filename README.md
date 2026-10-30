@@ -21,7 +21,9 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/color-pair-palette.md`](references/color-pair-palette.md): eight optional contrasting color pairs with role, contrast, and print boundaries.
 - [`references/dashboard-composition.md`](references/dashboard-composition.md): composition patterns and acceptance checks for dense data surfaces.
 - [`references/de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md): a scoped critique for generic generated-looking business UI.
+- [`references/icon-selection.md`](references/icon-selection.md): platform, project, library, and custom-icon selection with Morphicons integration boundaries.
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
+- [`references/proui-professional-ui.md`](references/proui-professional-ui.md): selection, licensing, and interaction contracts for professional workstation UI.
 - [`references/reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md): source, license, dependency, and runtime checks for selective ReactDrops reuse.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
 - [`references/safe-area-layout.md`](references/safe-area-layout.md): safe-area ownership for web, hybrid, and native layouts.
@@ -168,7 +170,9 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | No explicit color direction and no governing brand or project palette | [`color-pair-palette.md`](references/color-pair-palette.md) | One role-assigned candidate pair, preserved semantic colors, and measured foreground/background contrast |
 | Dashboard, analytics, operations console, dense admin surface | [`dashboard-composition.md`](references/dashboard-composition.md) | Decision-led hierarchy, representative data states, density and navigation acceptance |
 | De-AI UI critique, generic generated-looking UI, or business-dashboard polish | [`de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md) | A scoped correction that preserves brand, accessibility, useful density, project style, and truthful data |
+| New UI icons, icon-library selection, or meaningful icon-state transitions | [`icon-selection.md`](references/icon-selection.md) | A platform and project-compatible source, consistent visual language, explicit license, and accessible state behavior |
 | Profile, team, speaker, or personal card composition | [`profile-card-layouts.md`](references/profile-card-layouts.md) | A layout selected by content priority, not by decorative preference |
+| Professional editor, DAW, video or image tool, PCB workspace, game engine, or mission planner | [`proui-professional-ui.md`](references/proui-professional-ui.md) | A fit and license decision, interaction contracts for dense tool UI, and target-platform acceptance |
 | Distinctive React hero, portfolio feature, product card, or agent-state visual with no suitable project component | [`reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md) | One source-verified candidate, dependency and custom-license boundary, project-specific adaptation, target-runtime acceptance |
 | New or revised responsive type system | [`responsive-typography.md`](references/responsive-typography.md) | Semantic roles, fluid/container behavior, line measure, language and zoom acceptance |
 | Edge-to-edge mobile, hybrid, or native layout | [`safe-area-layout.md`](references/safe-area-layout.md) | One owner per inset, orientation/keyboard checks, no hard-coded device table |

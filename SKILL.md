@@ -65,7 +65,7 @@ Every named external skill, tool, service, and provider below is optional unless
 | Landing page, portfolio, or suitable visual redesign | `design-taste-frontend` for Design Read, variance/motion/density dials, and applicable pre-flight checks. Use the same direction established above; do not run a second competing brief. Not a dashboard, multi-step form, or native-app design base. |
 | Interaction feel and motion craft | `emil-design-eng`; `apple-design` for suitable gestures, springs, and spatial continuity. Use motion review/planning skills only for their matching tasks. |
 | Scroll-driven site narrative or generated-media interaction | `oil-motion` for the contract, scroll storyboard, asset pipeline, runtime mapping, and QA. Keep its direction inside the design read established here. |
-| Meaningful transitions between compatible stroke icons | `morphicons`; use it for glyph-to-glyph state morphing and keep application state semantics intact. |
+| Meaningful transitions between compatible stroke or filled icons | `morphicons`; use it for glyph-to-glyph state morphing and keep application state semantics intact. |
 | A prebuilt React icon with motion inside one glyph | [Lucide Animated](https://github.com/pqoqubbw/icons) when its exact component and license fit; add only the chosen shadcn registry item, not the whole catalog. Keep focus, touch, and reduced-motion behavior outside hover-only defaults. |
 | Grounded 3D scene, explainer, spatial puzzle, or interactive model | `3dviz-pro-max` for subject reasoning, representation choice, scene construction, and real-frame inspection. Its catalog and kits support judgment; they are not a runtime dependency or visual acceptance. |
 | Reference-image-to-procedural 3D model | `img2threejs` when the asset goal matches. |
@@ -75,6 +75,10 @@ Every named external skill, tool, service, and provider below is optional unless
 | Explicit Product Design, Figma, or other specialist workflow | Follow that installed workflow's entrypoint and requirements; do not substitute this skill for its visual-source, approval, or verification steps. |
 
 Read only the relevant specialist instructions. Do not load entire skill families, require delegation for every UI task, or install an unrequested dependency to satisfy a style preference.
+
+For UI icon selection or icon state transitions, read [references/icon-selection.md](references/icon-selection.md) before choosing a library or drawing SVG. Preserve the existing platform and brand language, and treat Morphicons as an optional glyph-transition tool rather than a new icon system.
+
+For professional desktop and tool UI, including editors, DAWs, video or image tools, PCB workspaces, game engines, and mission planners, read [references/proui-professional-ui.md](references/proui-professional-ui.md) before building panels, toolbars, inspectors, precision controls, or status bars. Evaluate fit and actual license access before copying components.
 
 ## Select the implementation
 
