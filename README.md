@@ -20,9 +20,14 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
 - [`references/color-pair-palette.md`](references/color-pair-palette.md): eight optional contrasting color pairs with role, contrast, and print boundaries.
 - [`references/dashboard-composition.md`](references/dashboard-composition.md): composition patterns and acceptance checks for dense data surfaces.
+- [`references/dashboard-patterns.md`](references/dashboard-patterns.md): task-led alternatives for analytics, image collections, reading spaces, and operations dashboards.
 - [`references/de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md): a scoped critique for generic generated-looking business UI.
+- [`references/ely-gpui-components.md`](references/ely-gpui-components.md): an optional Rust/GPUI component reference with platform and license boundaries.
 - [`references/icon-selection.md`](references/icon-selection.md): platform, project, library, and custom-icon selection with Morphicons integration boundaries.
+- [`references/impeccable-design-language.md`](references/impeccable-design-language.md): optional design-review and deterministic UI checks for existing web products.
+- [`references/interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md): restrained game feedback and button-press behavior that preserves real UI state.
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
+- [`references/pixel-game-fx.md`](references/pixel-game-fx.md): optional procedural pixel-art effects for games, with export and license checks.
 - [`references/proui-professional-ui.md`](references/proui-professional-ui.md): selection, licensing, and interaction contracts for professional workstation UI.
 - [`references/reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md): source, license, dependency, and runtime checks for selective ReactDrops reuse.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
@@ -30,6 +35,9 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/six-popup-types.md`](references/six-popup-types.md): task-led selection and semantic contracts for six popup and overlay patterns.
 - [`references/six-app-interactions.md`](references/six-app-interactions.md): six connected action-feedback and stateful-motion patterns.
 - [`references/six-component-interactions.md`](references/six-component-interactions.md): six stateful app and Mini Program interaction recipes.
+- [`references/stageshow-ui-demos.md`](references/stageshow-ui-demos.md): composition, cursor-demo, and review guidance for illustrative product scenes.
+- [`references/text-motion-vocabulary.md`](references/text-motion-vocabulary.md): names and accessible implementation briefs for six text-motion patterns.
+- [`references/ui-resource-index.md`](references/ui-resource-index.md): a selective index for finding UI components and interaction references.
 
 There are no scripts, runtime packages, generated assets, model credentials, or required MCP servers in this repository. The core workflow works with ordinary file inspection, editing, the project's existing toolchain, and direct runtime observation.
 

@@ -41,6 +41,8 @@ When no color direction is specified and no existing brand or project palette go
 
 For a dashboard, analytics workspace, operations console, or data-heavy admin surface, read [references/dashboard-composition.md](references/dashboard-composition.md). Establish the user decisions and data semantics first, then ask where the visual weight lands, who or what receives the first screen, and what can be removed without losing meaning. Its eight examples and percentages are source observations for comparison, not universal style tokens or layout quotas.
 
+For a broader choice between analytics, image-library, reading, and operations layouts, also consult [references/dashboard-patterns.md](references/dashboard-patterns.md). Treat the patterns as task-led alternatives; preserve the product's real data, design system, and responsive priorities.
+
 For de-AI UI critique, generic generated-looking UI, or template-like business-dashboard polish, read [references/de-ai-ui-checklist.md](references/de-ai-ui-checklist.md). Apply its checks to the changed surface even for a small UI task; preserve the brand, accessibility, useful density, project style, and real data instead of imposing a neutral-gray preset.
 
 For profile cards, team pages, or personal introductions, read [references/profile-card-layouts.md](references/profile-card-layouts.md) when layout direction is needed. Select by content priority; the twelve examples are alternatives, not a mandatory monochrome style.
@@ -77,6 +79,12 @@ Every named external skill, tool, service, and provider below is optional unless
 Read only the relevant specialist instructions. Do not load entire skill families, require delegation for every UI task, or install an unrequested dependency to satisfy a style preference.
 
 For UI icon selection or icon state transitions, read [references/icon-selection.md](references/icon-selection.md) before choosing a library or drawing SVG. Preserve the existing platform and brand language, and treat Morphicons as an optional glyph-transition tool rather than a new icon system.
+
+For procedural pixel-art effects in a game, read [references/pixel-game-fx.md](references/pixel-game-fx.md); it is not a general UI-effects recipe. For restrained game-style feedback or button-press behavior, read [references/interaction-feedback-patterns.md](references/interaction-feedback-patterns.md) and keep authoritative state, input semantics, and reduced-motion behavior intact.
+
+For naming and briefing text animation, read [references/text-motion-vocabulary.md](references/text-motion-vocabulary.md). Keep the complete text available to assistive technology and use real values and status.
+
+For optional component or design-review resources, use [references/ui-resource-index.md](references/ui-resource-index.md) to search selectively, then verify the actual source, platform fit, dependencies, and license before reuse. [Ely GPUI Components](references/ely-gpui-components.md) is relevant only to Rust/GPUI desktop work. [Impeccable](references/impeccable-design-language.md) is an optional review aid for existing web products, not a replacement design system or an instruction to install tooling.
 
 For professional desktop and tool UI, including editors, DAWs, video or image tools, PCB workspaces, game engines, and mission planners, read [references/proui-professional-ui.md](references/proui-professional-ui.md) before building panels, toolbars, inspectors, precision controls, or status bars. Evaluate fit and actual license access before copying components.
 
@@ -121,6 +129,8 @@ This guidance refers to [ZSeven-W/openpencil](https://github.com/ZSeven-W/openpe
 - **Separate local files from provider traffic:** an inspectable local `.op` file does not prove that AI prompts or assets stay on-device. Before any provider-backed generation, identify the selected provider, credential, data egress, output rights, and user authorization; deterministic canvas/CLI/MCP work does not itself authorize an external AI call.
 
 For component motion timing or token review, read [references/component-motion-tokens.md](references/component-motion-tokens.md). Match tokens by purpose rather than nearest numeric value; keep the project's motion system and the actual state-transition contract authoritative.
+
+For faux product UI, still or feature-card illustrations, authored cursor demos, or bento grids, read [references/stageshow-ui-demos.md](references/stageshow-ui-demos.md). Keep scenes illustrative rather than live product automation, and use the [UI resource index](references/ui-resource-index.md) and [interaction-feedback patterns](references/interaction-feedback-patterns.md) for source selection and real control semantics.
 
 ## Preserve continuity in stateful motion
 
