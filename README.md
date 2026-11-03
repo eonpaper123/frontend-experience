@@ -20,6 +20,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
 - [`references/color-pair-palette.md`](references/color-pair-palette.md): eight optional contrasting color pairs with role, contrast, and print boundaries.
 - [`references/dashboard-composition.md`](references/dashboard-composition.md): composition patterns and acceptance checks for dense data surfaces.
+- [`references/dashboard-menu-patterns.md`](references/dashboard-menu-patterns.md): six task-led navigation patterns with semantic, state, responsive, and data-consistency checks.
 - [`references/dashboard-patterns.md`](references/dashboard-patterns.md): task-led alternatives for analytics, image collections, reading spaces, and operations dashboards.
 - [`references/de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md): a scoped critique for generic generated-looking business UI.
 - [`references/ely-gpui-components.md`](references/ely-gpui-components.md): an optional Rust/GPUI component reference with platform and license boundaries.
@@ -177,6 +178,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | --- | --- | --- |
 | No explicit color direction and no governing brand or project palette | [`color-pair-palette.md`](references/color-pair-palette.md) | One role-assigned candidate pair, preserved semantic colors, and measured foreground/background contrast |
 | Dashboard, analytics, operations console, dense admin surface | [`dashboard-composition.md`](references/dashboard-composition.md) | Decision-led hierarchy, representative data states, density and navigation acceptance |
+| Dashboard sidebar, top navigation, icon rail, or multi-object switcher | [`dashboard-menu-patterns.md`](references/dashboard-menu-patterns.md) | A task-led navigation pattern with correct semantics, route or object state ownership, and responsive interaction acceptance |
 | De-AI UI critique, generic generated-looking UI, or business-dashboard polish | [`de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md) | A scoped correction that preserves brand, accessibility, useful density, project style, and truthful data |
 | New UI icons, icon-library selection, or meaningful icon-state transitions | [`icon-selection.md`](references/icon-selection.md) | A platform and project-compatible source, consistent visual language, explicit license, and accessible state behavior |
 | Profile, team, speaker, or personal card composition | [`profile-card-layouts.md`](references/profile-card-layouts.md) | A layout selected by content priority, not by decorative preference |

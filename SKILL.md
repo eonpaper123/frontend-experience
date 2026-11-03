@@ -43,6 +43,8 @@ For a dashboard, analytics workspace, operations console, or data-heavy admin su
 
 For a broader choice between analytics, image-library, reading, and operations layouts, also consult [references/dashboard-patterns.md](references/dashboard-patterns.md). Treat the patterns as task-led alternatives; preserve the product's real data, design system, and responsive priorities.
 
+For dashboard navigation, sidebar or menu selection, capsule navigation, icon rails, or switching among stores, projects, and other business objects, read [references/dashboard-menu-patterns.md](references/dashboard-menu-patterns.md). Choose by information architecture and interaction semantics, then keep selection, history, and displayed data synchronized; its six visual patterns are alternatives, not a mandatory skin.
+
 For de-AI UI critique, generic generated-looking UI, or template-like business-dashboard polish, read [references/de-ai-ui-checklist.md](references/de-ai-ui-checklist.md). Apply its checks to the changed surface even for a small UI task; preserve the brand, accessibility, useful density, project style, and real data instead of imposing a neutral-gray preset.
 
 For profile cards, team pages, or personal introductions, read [references/profile-card-layouts.md](references/profile-card-layouts.md) when layout direction is needed. Select by content priority; the twelve examples are alternatives, not a mandatory monochrome style.
