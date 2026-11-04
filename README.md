@@ -26,7 +26,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/ely-gpui-components.md`](references/ely-gpui-components.md): an optional Rust/GPUI component reference with platform and license boundaries.
 - [`references/icon-selection.md`](references/icon-selection.md): platform, project, library, and custom-icon selection with Morphicons integration boundaries.
 - [`references/impeccable-design-language.md`](references/impeccable-design-language.md): optional design-review and deterministic UI checks for existing web products.
-- [`references/interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md): restrained game feedback and button-press behavior that preserves real UI state.
+- [`references/interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md): game-impact, button-state, and task-workspace recipes that preserve authoritative UI and data state.
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
 - [`references/pixel-game-fx.md`](references/pixel-game-fx.md): optional procedural pixel-art effects for games, with export and license checks.
 - [`references/proui-professional-ui.md`](references/proui-professional-ui.md): selection, licensing, and interaction contracts for professional workstation UI.
@@ -191,6 +191,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | Component timing or motion-token audit | [`component-motion-tokens.md`](references/component-motion-tokens.md) | Semantic token mapping with interruption and reduced-motion checks |
 | Completion burst, linked feedback, stacked fan, snap cards, inertial wheel, or circular reveal | [`six-app-interactions.md`](references/six-app-interactions.md) | Authoritative state, one motion owner, interruption/reversal behavior, target-surface acceptance |
 | App or Mini Program component behavior | [`six-component-interactions.md`](references/six-component-interactions.md) | Authoritative state, keyboard/touch parity, settlement and announcement behavior |
+| Game hit feedback, button press/disabled feedback, Kanban/list switching, new-task dialogs, or attachment states | [`interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md) | Controlled feedback intensity, native activation semantics, stable task identity, and authoritative upload/save outcomes |
 | Rendering, 2D/3D, generated media, glass, scroll video, or advanced interaction choice | [`technology-selection.md`](references/technology-selection.md) | Chosen layer, important constraint, dependency/asset boundary, runtime proof |
 
 Load only the references that answer a real decision. Reading every reference for a small change adds noise and weakens the route.

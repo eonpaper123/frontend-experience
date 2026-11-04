@@ -136,6 +136,10 @@ For faux product UI, still or feature-card illustrations, authored cursor demos,
 
 ## Preserve continuity in stateful motion
 
+For button press and release feedback or disabled-action feedback, read [references/interaction-feedback-patterns.md](references/interaction-feedback-patterns.md#button-press-and-disabled-feedback). Preserve native activation semantics, explain unavailability, and separate immediate input feedback from the real operation's outcome.
+
+For Kanban/list switching, new-task forms, or attachment-state feedback in a project-management or CRM surface, read the [task-workspace interaction recipe](references/interaction-feedback-patterns.md#task-workspace-feedback). Preserve task identity and editing context; demonstration typing, file rows, and dialog closure are not proof of real input, upload, or save success.
+
 Treat advanced card, button, layout, and gesture motion as a state transition rather than a collection of keyframes. Before implementation, identify the source state, destination state, spatial anchor, commit/cancel conditions, and reverse path. The user should be able to answer: where did it come from, what did it become, and where did it go?
 
 For completion bursts, linked page feedback, stacked-card fans, snap-and-draw sequences, inertial wheels, or circular page reveals, read [references/six-app-interactions.md](references/six-app-interactions.md). Reuse the stateful-motion rules and Advanced Interaction Techniques table there instead of duplicating their mechanics.
@@ -184,6 +188,8 @@ Use this when the goal is one small, self-contained participatory site rather th
 Use the stateful-motion rules above for this loop rather than inventing a second interaction model. Apply follow/threshold/snap only when a drag, selection, or release-settlement interaction actually needs them; otherwise complete each action through its actual trigger and result. A pointer-drawing hook needs an equivalent keyboard/non-pointer way to create or select an entrant, and entrant, progress, rank, and result need text-readable status. Verify the actual changed surface: entry, repeated rounds, touch and keyboard paths, interruption, and reduced motion.
 
 ## Build playable Three.js browser games
+
+For hit-stop, shake, squash and stretch, trails, or other impact feedback, read [references/interaction-feedback-patterns.md](references/interaction-feedback-patterns.md#eight-game-feedback-techniques). Game intensity is not a default for ordinary UI. For procedural pixel-game effects or sprite export, read [references/pixel-game-fx.md](references/pixel-game-fx.md), not for routine web controls.
 
 Use this when the requested experience is a game rather than a 3D scene or viewer. [Three.js Game Skills](https://github.com/majidmanzarpour/threejs-game-skills) is a workflow reference for this section, not an installed runtime, a requirement to install its nine-skill pack, or evidence that any bundled test has run. Its reusable packaging lesson is one director contract routing narrow specialists: each `SKILL.md` owns the entry contract, references load on demand, and scripts/assets carry executable templates. Load only the capability the task needs and verify its outputs; this structure does not require separate agents or broad installation.
 
