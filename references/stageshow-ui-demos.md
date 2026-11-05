@@ -34,6 +34,20 @@ Check the opening and payoff at wide and compact sizes before reviewing the full
 
 If using the upstream kit, read the relevant craft, framing, motion, rehearsal, verification, and API references. Its capture tooling can produce stills, state captures, and gates, but a clean gate does not prove visual quality, frame rate, keyboard behavior, or touch behavior. Inspect the resulting images and live playback. Record what was reused, changed, captured, and left unchecked in the project's existing acceptance notes.
 
+## Reference-led demo and bento workflow
+
+Apply these rules inside the composition and inspection requirements above:
+
+1. **Start with one interaction.** Define one action, its visible consequence, a readable payoff, and an understandable reset before adding scenes. An illustrative inbox might show swipe, row departure and gap closure, count change, then undo. Preserve item identity on return. The scene remains an illustration, not proof that a production archive operation ran.
+2. **Use authorized product evidence.** Begin with the product screenshots, code, components, and design tokens already available to the project. Map type, color, spacing, shell treatment, and real content structure before inventing a look. Remove sensitive information from inputs and exports. Access to local product code does not authorize sending it to an external tool or service.
+3. **Give every bento tile a role.** Use the leading tile for the main feature story. Supporting tiles may show a close-up, a substantiated statistic, a relationship diagram, or an integration set. Share product tokens and spacing rhythm while varying density and visual weight. Equal tile sizes are valid when hierarchy remains clear. Never invent a metric to fill a tile; use real data or label it explicitly illustrative. Preserve the lead story in compact reflow and avoid competing automatic loops.
+
+### Reference, plan, capture, and review
+
+1. **Reference:** name the target slot and platform, shipping wide and compact sizes, reusable product UI and tokens, privacy boundary, and the one result viewers should understand.
+2. **Plan:** choose the closest existing example or component. Write action → consequence → payoff → reset, choose the settled poster, and assign a role to each bento tile. Expand beyond one interaction only when the story needs it.
+3. **Capture and review:** render in the real host. Inspect opening and payoff at both target sizes, then playback, busy intermediate frames, and the seam into the next loop. Fix hierarchy, crop, and text readability before fine motion. Report what was actually observed instead of treating a prompt, plan, generated file, or static gate as rendered acceptance.
+
 ## Installation and rights
 
 See the [upstream repository](https://github.com/benjitaylor/skills/tree/main/stageshow), [skill instructions](https://github.com/benjitaylor/skills/blob/main/stageshow/SKILL.md), and [license](https://github.com/benjitaylor/skills/blob/main/stageshow/LICENSE). The upstream source is MIT; preserve its notice when copying code. Its [NOTICE](https://github.com/benjitaylor/skills/blob/main/stageshow/NOTICE.md) describes asset-specific boundaries; verify each brand mark, image, and other asset independently. MIT does not grant trademark rights or imply endorsement. This document summarizes a workflow and redistributes no kit code or media.

@@ -35,6 +35,8 @@ Separate three decisions:
 
 Use `refero-design` for reference research and synthesis on substantial web or product-screen design. Its styles/screens/flows are evidence sources for bounded design questions, not a requirement to research every small edit. Research native and engine-led experiences against the target platform's conventions and relevant real examples. Reference access and supplied assets must be real; do not claim live Refero research without callable tools.
 
+For reference-first UI, missing visual references, or a generic result caused by an unexamined template choice, read [references/reference-first-ui.md](references/reference-first-ui.md). Select sources by the unresolved design question, explain their concrete structure and project adaptation before coding, then compare the rendered result. Reference count and stylistic bans are not quality gates.
+
 Lock an actionable direction before building: primary reference or existing system, traits to preserve, required states, asset strategy, and meaningful deviations. A short explanation or an update to an existing project design document is enough. Do not create a separate document for every component change.
 
 When no color direction is specified and no existing brand or project palette governs the surface, choose one pair from [references/color-pair-palette.md](references/color-pair-palette.md). Treat it as a candidate pool instead of inventing a generic purple-blue gradient; preserve semantic colors and measure the actual foreground/background contrast before adoption.
@@ -57,6 +59,8 @@ For popup or overlay selection—Modal, Drawer, Toast, Dropdown, Popover, or Too
 
 For `Liquid Glass`, `glassmorphism`, frosted glass, translucent navigation, or glass cards, read [the glass-material selection recipe](references/technology-selection.md#select-glass-materials-by-mechanism). Distinguish native platform material, CSS backdrop blur, and real refraction before choosing an implementation; keep the existing platform and let content, state, and contrast outrank the effect.
 
+For a Glass Ruler, sampled refraction, dispersion, Fresnel response, SwiftUI/Metal sampling, or an equivalent web shader, also read the [Glass Ruler appendix](references/reference-first-ui.md#glass-ruler). It records coordinate, sampling, accessibility, and evidence boundaries; it is not a default UI material or a tested component.
+
 ## Assign specialist work without competing directions
 
 Specialists contribute within the user's brief and established direction. Their stack preferences, aesthetic defaults, and fixed numeric heuristics do not justify changing the project or claiming platform facts without verification.
@@ -66,6 +70,7 @@ Every named external skill, tool, service, and provider below is optional unless
 | Need | Use |
 | --- | --- |
 | Reference-led web/product-screen design | `refero-design` for research and synthesis, proportional to the missing decisions. |
+| Reference-first direction for an unresolved UI question | The optional `reference-first-ui` skill when installed; otherwise use this repository's included reference-first workflow and the product's available evidence. Do not claim external catalog access that did not occur. |
 | Landing page, portfolio, or suitable visual redesign | `design-taste-frontend` for Design Read, variance/motion/density dials, and applicable pre-flight checks. Use the same direction established above; do not run a second competing brief. Not a dashboard, multi-step form, or native-app design base. |
 | Interaction feel and motion craft | `emil-design-eng`; `apple-design` for suitable gestures, springs, and spatial continuity. Use motion review/planning skills only for their matching tasks. |
 | Scroll-driven site narrative or generated-media interaction | `oil-motion` for the contract, scroll storyboard, asset pipeline, runtime mapping, and QA. Keep its direction inside the design read established here. |
@@ -139,6 +144,8 @@ For faux product UI, still or feature-card illustrations, authored cursor demos,
 For button press and release feedback or disabled-action feedback, read [references/interaction-feedback-patterns.md](references/interaction-feedback-patterns.md#button-press-and-disabled-feedback). Preserve native activation semantics, explain unavailability, and separate immediate input feedback from the real operation's outcome.
 
 For Kanban/list switching, new-task forms, or attachment-state feedback in a project-management or CRM surface, read the [task-workspace interaction recipe](references/interaction-feedback-patterns.md#task-workspace-feedback). Preserve task identity and editing context; demonstration typing, file rows, and dialog closure are not proof of real input, upload, or save success.
+
+For send buttons, long-press action menus, accordions, multi-select action bars, quantity steppers, flip cards, filter chips, or step progress, read the [eight component interaction patterns](references/interaction-feedback-patterns.md#component-interaction-patterns). Select by the actual action and missing state feedback, not as eight effects to apply everywhere.
 
 Treat advanced card, button, layout, and gesture motion as a state transition rather than a collection of keyframes. Before implementation, identify the source state, destination state, spatial anchor, commit/cancel conditions, and reverse path. The user should be able to answer: where did it come from, what did it become, and where did it go?
 

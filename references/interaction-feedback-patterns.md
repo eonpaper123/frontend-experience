@@ -55,8 +55,42 @@ On the target runtime, select a task and switch Kanban to list and back; verify 
 
 Repeat the relevant path with keyboard, touch, a narrow screen and soft keyboard, rapid view changes, and reduced motion. The workspace must remain readable, operable, and data-consistent. These are acceptance requirements for a future implementation, not claims that this repository contains or has tested an application.
 
+<a id="component-interaction-patterns"></a>
+## Eight component interaction patterns
+
+Use these recipes when a component lacks a clear action-to-result transition. Choose only the pattern that resolves the current task: steppers and progress for forms or orders; multi-select and long-press actions for lists or workspaces; accordions and flip cards for content; send feedback and filter chips for sharing or search. Reuse the project's components and source-search workflow first. The eight patterns are not a visual theme or a checklist to apply together.
+
+Each recipe follows **action → immediate feedback → authoritative result**:
+
+| Pattern | Behavior contract | Copyable implementation prompt |
+| --- | --- | --- |
+| Send or share button | Activate → show a small press and outgoing icon while the real operation is pending → show success, failure, or cancellation from the business result | Build a share button whose paper-plane icon leaves the control after activation. Show a truthful sending state, mark it shared only after authoritative success, and keep failure or cancellation actionable. |
+| Long-press action menu | Meet the platform's long-press condition → lift the card and reveal actions → commit the selected action or restore the card on cancellation | Build a card action menu that appears after a valid long press, clearly shows the active destination, closes after selection, restores the card on cancellation, and offers an equivalent visible non-gesture entry. |
+| Accordion | Activate a question heading → reveal its answer and move following content → keep the intended item open; in single-open mode, close the prior item | Build a single-open FAQ accordion with a semantic heading control, an answer that expands without overlap, keyboard operation, visible expanded state, and no focusable descendants left inside collapsed content. |
+| Multi-select action bar | Select an item → reveal the shared action bar and count → keep the bar and every action bound to the same selection set; hide after the count reaches zero | Build a multi-select list with one authoritative selection set, synchronized item affordances and count, a safe-area-aware action bar, coherent exit, and deliberate focus return when the bar disappears. |
+| Quantity stepper | Activate plus or minus → update the logical value immediately while the visible number rolls and the button settles → stop at the newest valid value and enforce the real bounds | Build an accessible quantity stepper whose buttons have names, whose current value is readable, and whose number motion never queues or decides the count. Use the product's bounds and step; zero is only an example lower bound. |
+| Flip card | Activate → rotate around the vertical axis → expose the other side; activate again to return | Build a two-sided information card with keyboard activation and a reversible vertical-axis transition. Hide the mirrored back face visually and remove the inactive face from hit testing, focus, and assistive exposure. Inner links and buttons must not trigger the flip accidentally. |
+| Filter chips | Change a condition → move the selected indicator and update results through a truthful loading transition → settle only when the selected condition and returned result agree | Build a filter control whose semantics match the real model, whose results handle loading, empty, error, and stale responses, and whose collection changes use stable IDs. Use `OUT → MOVE → IN` only when items actually leave, move, and enter; do not delay usable content for stagger. |
+| Step progress | Complete the current step's validation and required save → change its marker to complete and fill the connection → highlight the next real step | Build a multi-step progress indicator whose completion comes from validation and required persistence, not animation time. Keep the description, current step, return path, failure state, and stored completion markers synchronized. |
+
+### Component boundaries
+
+- **Immediate feedback is not early success.** Decorative send motion does not own request state. Opening a platform share sheet does not prove that a recipient received content. Step completion comes from real validation and persistence. Do not add artificial waits.
+- **Long press and multi-select are complete modes.** Resolve scrolling conflicts and cancellation, provide a non-gesture path, and use the project's menu focus and close behavior. In multi-select, item affordances, spacing, title or navigation, count, and action bar update from one selection source. Move focus before removing a bar that contains it.
+- **Expansion, numbers, and flipping keep semantics.** Single-open accordion is a product choice, not a universal rule. A stepper updates from its latest logical value; animation does not serialize state. A flip card is a `rotateY` face transition, not the FLIP layout technique, and visual backface hiding does not by itself fix focus or pointer exposure.
+- **Filter control and results own separate state.** Chips may represent single or multiple selection; do not convert them all into tabs. When an entire result set changes, wait for the selected query's usable response before replacing it. Associate each response with its condition so a stale response cannot overwrite a newer selection.
+- **Choose the lightest implementation.** Existing semantic controls, CSS/SVG, WAAPI, or the project's motion runtime are usually sufficient. React, Tailwind, or Motion are optional stack choices. A normal flip card does not require Three.js. Morphicons may animate a matching glyph but does not own the container, collection, or business state.
+
+### Component-pattern acceptance
+
+1. The action and its intended result remain clear, including when several controls coordinate one mode.
+2. Pointer, touch, and keyboard can complete the same task where supported. Long-press cancellation performs no action, and rapid input continues from the current state.
+3. Pending, success, failure, and cancellation are truthful. Check selection returning to zero, stepper bounds, validation failure and back navigation, filter empty/error states, and stale-response rejection only where those paths exist.
+4. Text, values, selected count, expanded state, and current step agree with data. Focus and reading order remain correct; color or motion is never the only result signal, and compact layouts keep overlays and action bars clear of necessary content.
+5. Forward, reverse, interruption, and terminal states are defined before polishing motion. Reduced motion preserves the same information and controls through a direct or simpler state change, never a half-flipped card, vanished answer, or false completion marker.
+
 ## Sources and rights boundary
 
 The game-feedback taxonomy was inspired by the public Xiaohongshu post [“Why does the version on the right feel better? Eight techniques”](https://xhslink.cn/o/xY6gnYFuYq) credited to Chengxuyuan Naiba. The task-workspace recipe was inspired by [“Day 827: Project management dashboard interaction motion”](https://www.xiaohongshu.com/discovery/item/6a8710ac000000000801192b) credited to Sheji Shi A-Can. The button notes credit MoChu AI Official as the source demonstrator.
 
-This reference is an independently written design and engineering synthesis. It includes no source video, audio, images, or code, and the demonstrations do not prove a production implementation, upload, save, timing, or accessibility behavior.
+The eight component patterns synthesize delivered descriptions rather than an independently viewed original video; they do not establish the source framework, animation library, duration, or business completion behavior. This reference is independently written and includes no source video, audio, images, or code. The demonstrations do not prove a production implementation, upload, save, timing, accessibility behavior, or framework choice.

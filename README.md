@@ -26,11 +26,12 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/ely-gpui-components.md`](references/ely-gpui-components.md): an optional Rust/GPUI component reference with platform and license boundaries.
 - [`references/icon-selection.md`](references/icon-selection.md): platform, project, library, and custom-icon selection with Morphicons integration boundaries.
 - [`references/impeccable-design-language.md`](references/impeccable-design-language.md): optional design-review and deterministic UI checks for existing web products.
-- [`references/interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md): game-impact, button-state, and task-workspace recipes that preserve authoritative UI and data state.
+- [`references/interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md): game-impact, button-state, task-workspace, and eight component-interaction recipes that preserve authoritative UI and data state.
 - [`references/profile-card-layouts.md`](references/profile-card-layouts.md): twelve content-led profile composition patterns.
 - [`references/pixel-game-fx.md`](references/pixel-game-fx.md): optional procedural pixel-art effects for games, with export and license checks.
 - [`references/proui-professional-ui.md`](references/proui-professional-ui.md): selection, licensing, and interaction contracts for professional workstation UI.
 - [`references/reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md): source, license, dependency, and runtime checks for selective ReactDrops reuse.
+- [`references/reference-first-ui.md`](references/reference-first-ui.md): question-led reference research, anti-template checks, and a bounded glass-refraction appendix.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
 - [`references/safe-area-layout.md`](references/safe-area-layout.md): safe-area ownership for web, hybrid, and native layouts.
 - [`references/six-popup-types.md`](references/six-popup-types.md): task-led selection and semantic contracts for six popup and overlay patterns.
@@ -177,6 +178,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | Task signal | Load | Output expected |
 | --- | --- | --- |
 | No explicit color direction and no governing brand or project palette | [`color-pair-palette.md`](references/color-pair-palette.md) | One role-assigned candidate pair, preserved semantic colors, and measured foreground/background contrast |
+| Unsettled visual direction, missing references, generic template result, or sampled refractive glass | [`reference-first-ui.md`](references/reference-first-ui.md) | References chosen by the missing decision, concrete project adaptations, one representative render comparison, or a bounded sampling contract |
 | Dashboard, analytics, operations console, dense admin surface | [`dashboard-composition.md`](references/dashboard-composition.md) | Decision-led hierarchy, representative data states, density and navigation acceptance |
 | Dashboard sidebar, top navigation, icon rail, or multi-object switcher | [`dashboard-menu-patterns.md`](references/dashboard-menu-patterns.md) | A task-led navigation pattern with correct semantics, route or object state ownership, and responsive interaction acceptance |
 | De-AI UI critique, generic generated-looking UI, or business-dashboard polish | [`de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md) | A scoped correction that preserves brand, accessibility, useful density, project style, and truthful data |
@@ -191,7 +193,8 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | Component timing or motion-token audit | [`component-motion-tokens.md`](references/component-motion-tokens.md) | Semantic token mapping with interruption and reduced-motion checks |
 | Completion burst, linked feedback, stacked fan, snap cards, inertial wheel, or circular reveal | [`six-app-interactions.md`](references/six-app-interactions.md) | Authoritative state, one motion owner, interruption/reversal behavior, target-surface acceptance |
 | App or Mini Program component behavior | [`six-component-interactions.md`](references/six-component-interactions.md) | Authoritative state, keyboard/touch parity, settlement and announcement behavior |
-| Game hit feedback, button press/disabled feedback, Kanban/list switching, new-task dialogs, or attachment states | [`interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md) | Controlled feedback intensity, native activation semantics, stable task identity, and authoritative upload/save outcomes |
+| Game hit feedback, button press/disabled feedback, Kanban/list switching, new-task dialogs, attachment states, or the eight component patterns | [`interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md) | Controlled feedback intensity, native activation semantics, stable identity, interruption handling, and authoritative operation outcomes |
+| Illustrative product scene, authored cursor demo, or bento feature story | [`stageshow-ui-demos.md`](references/stageshow-ui-demos.md) | One action and payoff, authorized product evidence, truthful tile roles, and rendered wide/compact review |
 | Rendering, 2D/3D, generated media, glass, scroll video, or advanced interaction choice | [`technology-selection.md`](references/technology-selection.md) | Chosen layer, important constraint, dependency/asset boundary, runtime proof |
 
 Load only the references that answer a real decision. Reading every reference for a small change adds noise and weakens the route.
