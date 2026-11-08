@@ -43,6 +43,8 @@ When no color direction is specified and no existing brand or project palette go
 
 For a dashboard, analytics workspace, operations console, or data-heavy admin surface, read [references/dashboard-composition.md](references/dashboard-composition.md). Establish the user decisions and data semantics first, then ask where the visual weight lands, who or what receives the first screen, and what can be removed without losing meaning. Its eight examples and percentages are source observations for comparison, not universal style tokens or layout quotas.
 
+For chart choice or chart presentation inside any client surface, read [references/chart-selection-and-presentation.md](references/chart-selection-and-presentation.md). Start from the reader's question, data relationship, units, denominators, and missing-value meaning; choose one fitting encoding and verify it with known data, accessible text or structured detail, representative states, and the target runtime.
+
 For a broader choice between analytics, image-library, reading, and operations layouts, also consult [references/dashboard-patterns.md](references/dashboard-patterns.md). Treat the patterns as task-led alternatives; preserve the product's real data, design system, and responsive priorities.
 
 For dashboard navigation, sidebar or menu selection, capsule navigation, icon rails, or switching among stores, projects, and other business objects, read [references/dashboard-menu-patterns.md](references/dashboard-menu-patterns.md). Choose by information architecture and interaction semantics, then keep selection, history, and displayed data synchronized; its six visual patterns are alternatives, not a mandatory skin.
@@ -69,6 +71,10 @@ Every named external skill, tool, service, and provider below is optional unless
 
 | Need | Use |
 | --- | --- |
+| Diagnosing a muddy gradient, vibrating color boundary, merged shapes, or weak accent hierarchy | The optional color-audit skill when available; otherwise use the included [color review](references/de-ai-ui-checklist.md#color-review). Preserve brand and semantic tokens, then inspect actual contrast and themes. |
+| Adding parting, insertion-line, and cursor feedback to an existing reorder interaction | The optional drag-reorder-feel skill when available; otherwise use the included [drag-reorder recipe](references/interaction-feedback-patterns.md#drag-reorder-feel). The established drag engine still owns activation, collision, auto-scroll, cancellation, and commit. |
+| Authored product or marketing video | The optional hypit skill when available. Consult its video-tool selection guidance for the requested deliverable; do not install a provider or call one without the required authorization and credential. Website scroll-media behavior remains an oil-motion concern. |
+| Abstract functional-relationship illustration for a product surface | The optional spotkit skill when available. Use Stageshow for a recognizable illustrative product fragment and a real screenshot when the user must see an actual click location. Preserve brand, unique inline-SVG IDs, theme variants, and meaningful text alternatives; inspect the rendered size and theme. |
 | Reference-led web/product-screen design | `refero-design` for research and synthesis, proportional to the missing decisions. |
 | Reference-first direction for an unresolved UI question | The optional `reference-first-ui` skill when installed; otherwise use this repository's included reference-first workflow and the product's available evidence. Do not claim external catalog access that did not occur. |
 | Landing page, portfolio, or suitable visual redesign | `design-taste-frontend` for Design Read, variance/motion/density dials, and applicable pre-flight checks. Use the same direction established above; do not run a second competing brief. Not a dashboard, multi-step form, or native-app design base. |
@@ -99,6 +105,10 @@ For professional desktop and tool UI, including editors, DAWs, video or image to
 
 ### Reuse component source before writing new UI
 
+Choose product-explanation imagery by what the viewer must understand. Use the optional `spotkit` skill for an abstract functional relationship such as permissions to matrix, approval to state change, integrations to connected hub, or audit log to timeline. Use Stageshow for a recognizable illustrative product fragment or authored demonstration, and an authorized real screenshot for where to click in the actual product. Do not add an illustration merely because a section exists, depict unsupported capabilities, or replace a real control with illustrative SVG.
+
+When Spotkit fits, follow feature interpretation → relationship or metaphor → closest layout → adapted SVG. Reuse its examples without copying its manual into this skill. A selected preset governs that illustration family, not the entire product; preserve the project's brand and use another established asset route when the preset does not fit. For host-controlled themes, inline the SVG with instance-unique IDs; for external image embedding, provide explicit theme exports. Give meaningful art a text alternative and hide redundant decoration. Run the optional skill's SVG and delivery checks when available, then inspect the real slot size and themes: static lint does not prove that the illustration explains the relationship or avoids implying a screenshot, live state, or interactive control.
+
 For every UI component task, including small changes, first make a targeted search of the project's component directories, this skill's `references/`, the host's available skill catalog or source assets, and relevant reusable component sources that are actually available to the task. Prefer an existing component or the smallest suitable adaptation over writing from scratch; search by the requested behavior and target framework rather than scanning every library in full.
 
 Before adopting a candidate, inspect its actual source, license, dependencies, platform fit, and accessibility against the project. A reference, preview, or skill is not necessarily reusable component source. Preserve required notices and obtain any required dependency authorization. If no suitable source exists, or a candidate is unsuitable, briefly state the concrete reason in the existing task notes before authoring new code; no separate report is needed.
@@ -122,7 +132,7 @@ For ReactDrops, AI-ready component briefs, Showcase Pointer, Refracted Text, Fra
 
 When a user describes an effect in conversational language or asks for wording to give a designer or coding agent, read [references/motion-description-vocabulary.md](references/motion-description-vocabulary.md) before choosing an implementation. First name the trigger, motion shape, and interaction outcome; then turn that label into an explicit behavior contract. Treat compound scene labels as descriptive prompt language rather than standardized motion terms or evidence of a particular rendering technique.
 
-For `Linear` / `HAIRLINE`, `hairline-create`, `figures`, thin isometric line art, or pointer-responsive SVG illustration requests, use the Hairline selection and implementation recipe in that reference. It distinguishes an existing project component, the verified `@lucasmarkes/hairline` asset, and a custom authored figure; commonly misreported `lucasmaystre` / `@lucasmaystre/lineicons` names are search aliases, not verified package coordinates.
+For `Linear` / `HAIRLINE`, `hairline-create`, `hairline-adopt`, `figures`, thin isometric line art, or pointer-responsive SVG illustration requests, use the Hairline selection and implementation recipe in that reference. It distinguishes an existing project component, a verified catalog figure, a custom authored figure, and an interpreted rebuild of an authorized source SVG; commonly misreported `lucasmaystre` / `@lucasmaystre/lineicons` names are search aliases, not verified package coordinates.
 
 ### Use OpenPencil as an intentional design workspace
 
@@ -137,6 +147,8 @@ This guidance refers to [ZSeven-W/openpencil](https://github.com/ZSeven-W/openpe
 
 For component motion timing or token review, read [references/component-motion-tokens.md](references/component-motion-tokens.md). Match tokens by purpose rather than nearest numeric value; keep the project's motion system and the actual state-transition contract authoritative.
 
+For a practical press, menu/popover, tooltip, transform-origin, duration, or blur check, use the [seven practical motion checks](references/component-motion-tokens.md#emil-practical-checks). For a linear, ease-in, ease-out, ease-in-out, or brand curve decision, read [references/motion-curves-scenario-map.md](references/motion-curves-scenario-map.md). Both are scenario maps, not universal defaults or reasons to add JavaScript configuration.
+
 For faux product UI, still or feature-card illustrations, authored cursor demos, or bento grids, read [references/stageshow-ui-demos.md](references/stageshow-ui-demos.md). Keep scenes illustrative rather than live product automation, and use the [UI resource index](references/ui-resource-index.md) and [interaction-feedback patterns](references/interaction-feedback-patterns.md) for source selection and real control semantics.
 
 ## Preserve continuity in stateful motion
@@ -146,6 +158,8 @@ For button press and release feedback or disabled-action feedback, read [referen
 For Kanban/list switching, new-task forms, or attachment-state feedback in a project-management or CRM surface, read the [task-workspace interaction recipe](references/interaction-feedback-patterns.md#task-workspace-feedback). Preserve task identity and editing context; demonstration typing, file rows, and dialog closure are not proof of real input, upload, or save success.
 
 For send buttons, long-press action menus, accordions, multi-select action bars, quantity steppers, flip cards, filter chips, or step progress, read the [eight component interaction patterns](references/interaction-feedback-patterns.md#component-interaction-patterns). Select by the actual action and missing state feedback, not as eight effects to apply everywhere.
+
+For improving the feel of an existing list, board, layer, or tag-row reorder interaction, read the [drag reorder recipe](references/interaction-feedback-patterns.md#drag-reorder-feel). Preserve the current engine's activation, pickup offset, collision, auto-scroll, cancellation, and logical commit; the recipe adds only bounded visual feedback.
 
 Treat advanced card, button, layout, and gesture motion as a state transition rather than a collection of keyframes. Before implementation, identify the source state, destination state, spatial anchor, commit/cancel conditions, and reverse path. The user should be able to answer: where did it come from, what did it become, and where did it go?
 
@@ -210,6 +224,8 @@ Use this when the requested experience is a game rather than a 3D scene or viewe
 Claim completion only from current-run evidence tied to the current build. Screenshot baselines, canvas metrics, manifests, skeleton checks, and model downloads each prove a narrow property; none alone proves gameplay quality, visual quality, mobile behavior, or release readiness.
 
 ## Design input-state microinteractions
+
+For an AI composer, streaming response pane, decorative-box reduction, concentric-card geometry, or resizable split workspace, read [references/ai-interface-details.md](references/ai-interface-details.md). Preserve IME composition, reading intent, focus and contrast boundaries, authoritative result state, and cancellable/restorable resize behavior; do not add timer patches or claim streamed success before the real result.
 
 Treat OTP, verification-code, PIN, and other segmented-input motion as feedback around a real form control, not as a replacement for input semantics. Keep one source of truth for the value and status. On the web, use text input semantics so leading zeroes survive, add an explicit label, set `inputmode="numeric"`, and put `autocomplete="one-time-code"` on the input that owns the code so operating-system autofill remains available.
 

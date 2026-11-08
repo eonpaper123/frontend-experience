@@ -2,6 +2,8 @@
 
 Use for modal, dropdown, panel, toast, badge, text/icon, and similar UI motion or a requested timing audit. Reference: [Transitions.dev](https://transitions.dev/) and its [official skill](https://github.com/Jakubantalik/transitions.dev/blob/main/skills/transitions-dev/SKILL.md), checked 2026-09-27. The skill lists 32 recipes while the README retains older 12/18 counts; counts and popularity are not selection criteria.
 
+For choosing a curve from the interaction scenario rather than a token name, also see [motion curves by scenario](motion-curves-scenario-map.md).
+
 ## Reusable rules
 
 1. **Map by purpose, not numeric proximity.** Identify the element, trigger, entry/exit or update state, anchor, interruption behavior, and completion. Reuse the project's semantic motion tokens. Two equal durations can serve different purposes; an unmatched effect stays unchanged during an audit rather than being forced into the nearest token.
@@ -20,6 +22,21 @@ Use for modal, dropdown, panel, toast, badge, text/icon, and similar UI motion o
 | Panel open / close | 400ms / 350ms | Separate entry and exit tokens for that recipe. |
 | Small text movement / text reveal | 4px / 12px | Local offsets, not limits on shared-element or page travel. |
 | Avatar hover return | Strong overshooting easing | A documented counterexample to “no bounce on exit.” |
+
+<a id="emil-practical-checks"></a>
+## Seven practical motion checks
+
+Use these as scoped review questions for the component being changed, not as seven effects to add everywhere.
+
+1. **Press without shrinking the control contract.** A temporary `scale(0.97)` is a useful candidate for a tactile press, provided the hit target, visible focus, layout, and native click or keyboard activation remain intact. Cancellation and a gesture handed to scrolling must restore the control without activating it.
+2. **Start overlays near their final size.** A menu or popover may begin around `0.93–0.95` scale so its content remains legible while the surface appears. This is a candidate for ordinary anchored overlays, not a ban on zero-scale illustrations or a substitute for the popup's focus and modality rules.
+3. **Accelerate repeated tooltip use.** The first tooltip in a sequence may retain its intentional delay while subsequent sibling tooltips appear with little or no delay for a bounded period. Scope that skip-delay state to the related group; do not turn it into a global zero-delay rule or make non-interactive tooltip content capture input.
+4. **Choose easing from the state change.** The source recommends ease-out for both entering and exiting because the visible portion starts quickly and settles gently. [Motion curves by scenario](motion-curves-scenario-map.md) records accelerating ease-in as a valid alternative for an element that is leaving and no longer needs attention. On-screen movement often suits ease-in-out, direct hover response may use a simple ease, and constant-rate motion may use linear. Treat each as a scenario candidate and keep the project's established curve authoritative.
+5. **Set origin from the relationship.** An anchored overlay should grow from its actual trigger and final placed edge. Recompute that origin when collision handling flips or shifts the surface; a visually convenient fixed corner breaks causality.
+6. **Tune duration against scope.** Rough candidates are `100–150 ms` for very small feedback, `150–250 ms` for controls and overlays, and `200–300 ms` for larger modal transitions. Distance, frequency, content, input mode, platform convention, and interruption behavior decide the result; these ranges are not universal tokens.
+7. **Use blur only when it explains depth.** The source demonstrates about `2px` of blur as a light accompaniment to entry or exit. Blur is optional, must not hide errors or compensate for weak layout, and needs target-device performance and contrast inspection. Reduced motion should preserve a clear final state without depending on blur or displacement.
+
+Acceptance is observable on the target surface: open, close, reopen, reverse, move focus, switch input modes, and enable reduced motion. The correct state, focus, hit target, and property ownership must survive every interruption. This section independently synthesizes [Emil Kowalski's seven practical animation tips](https://emilkowal.ski/ui/7-practical-animation-tips) and [Agents with Taste](https://emilkowal.ski/ui/agents-with-taste); it includes no copied implementation or media and makes no runtime-test claim.
 
 The upstream tokens use shared names such as `--duration-fast` plus per-recipe semantic variables. Preserve existing project vocabulary instead of globally renaming tokens to match this library. Several recipes also need JavaScript orchestration; portable CSS does not mean every behavior is JavaScript-free.
 

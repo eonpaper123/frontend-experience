@@ -4,6 +4,8 @@ Use this reference for game impact feedback, button press behavior, and task-wor
 
 No runtime dependency is required. Reuse the project's existing controls, motion tokens, form elements, and overlay primitives.
 
+For choosing an easing curve from the interaction scenario, see [motion curves by scenario](motion-curves-scenario-map.md).
+
 ## Eight game-feedback techniques
 
 | Technique | Game expression | Careful product-interface adaptation |
@@ -88,6 +90,28 @@ Each recipe follows **action → immediate feedback → authoritative result**:
 3. Pending, success, failure, and cancellation are truthful. Check selection returning to zero, stepper bounds, validation failure and back navigation, filter empty/error states, and stale-response rejection only where those paths exist.
 4. Text, values, selected count, expanded state, and current step agree with data. Focus and reading order remain correct; color or motion is never the only result signal, and compact layouts keep overlays and action bars clear of necessary content.
 5. Forward, reverse, interruption, and terminal states are defined before polishing motion. Reduced motion preserves the same information and controls through a direct or simpler state change, never a half-flipped card, vanished answer, or false completion marker.
+
+<a id="drag-reorder-feel"></a>
+## Drag reorder feel
+
+Use this recipe to improve an existing reorder interaction in a list, board, layer panel, or tag row. It does not define free-canvas dragging, cross-window transfer, persistence, or the underlying reorder engine. If the optional `drag-reorder-feel` skill is available, its implementation sketch can help translate the rules, but it is not a production component.
+
+The established drag system still owns activation, pickup offset, collision detection, auto-scroll, valid destinations, and the logical commit. This recipe adds three subordinate signals: a grabbed cursor or equivalent active affordance, an insertion line attached to the current slot, and a short two-sided parting response in neighboring items. The marker must not change measured layout geometry, must communicate invalid targets, and becomes a stable non-animated marker under reduced motion.
+
+For an insertion slot `g`, exclude the dragged item from the visual-neighbor sequence. A candidate distance is:
+
+```text
+if i < g: n = g - 1 - i
+else:     n = i - g
+offset(n) = base * 0.7^n
+delay(n)  = 24 ms * n
+```
+
+Apply opposite offset signs on the two sides of the slot. A dense row might begin with an `8px` base and a larger card with `10px`; both are tuning candidates. Limit the effect to an explicit finite neighborhood and leave all more distant items at zero instead of clamping every remote item to a residual `4px`. Give transforms, opacity, and insertion-line position one owner each so the drag library and feedback layer do not fight.
+
+Measure untransformed slots and account for the actual scroll container, page offsets, and retained pickup offset. Clearing CSS variables only removes inputs; it does not prove a transition has finished. Cancellation, `Escape`, lost pointer capture, an invalid drop, or a gesture handed to scrolling must restore visual and logical order. Only a valid drop commits the new order.
+
+Acceptance covers first and last slots, a no-op drop, rapid crossing and reversal, auto-scroll, nonzero page and container offsets, cancellation, keyboard reordering, reduced motion, stable IDs, logical order, focus, and any required announcement. The values above remain candidates, and this repository makes no large-list frame-rate or runtime acceptance claim. This section independently synthesizes the interaction rules and includes no copied component code or media.
 
 ## Sources and rights boundary
 

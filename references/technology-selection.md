@@ -115,6 +115,8 @@ Use an SVG outline only as a decorative per-slot layer. A `rect` normalized with
 
 ## Select scroll-driven motion and delivery
 
+For GSAP timelines, Lenis smooth scrolling, or React Bits source candidates, read [GSAP, Lenis, and React Bits selection](gsap-lenis-react-bits.md). Choose the three independently: that reference records a dated version and license snapshot, one-loop ownership, cleanup, reduced-motion and nested-scroll checks, and an unexecuted demo plan. It does not make any library mandatory or prove that one is installed in the target project.
+
 Choose the lightest layer that can preserve the intended change:
 
 | Experience | Layer and boundary |

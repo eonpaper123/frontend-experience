@@ -18,7 +18,7 @@ Then add the behavior contract the label cannot carry: controlled subject and pr
 
 ## Select and build pointer-responsive Hairline figures
 
-Use this recipe for searches such as `Linear`, `HAIRLINE`, `hairline-create`, `figures`, `lineicons`, line art, isometric, pointer response, hover reveal, interactive illustration, standalone HTML, or microinteraction. Misreported names such as `figures`, Lucas Maystre, or `@lucasmaystre/lineicons` are not official project coordinates. The verified source is Lucas Marques's [Hairline](https://hairline.lucasmarkes.com/), [repository](https://github.com/lucasmarkes/hairline), and MIT-licensed package `@lucasmarkes/hairline`; the public [`hairline-create` skill](https://hairline.lucasmarkes.com/skill) creates a self-contained HTML figure. These are available sources, not globally installed capabilities or permission to add a project dependency.
+Use this recipe for searches such as `Linear`, `HAIRLINE`, `hairline-create`, `hairline-adopt`, `figures`, `lineicons`, line art, isometric, pointer response, hover reveal, interactive illustration, standalone HTML, or microinteraction. Misreported names such as `figures`, Lucas Maystre, or `@lucasmaystre/lineicons` are not official project coordinates. The verified source is Lucas Marques's [Hairline](https://hairline.lucasmarkes.com/), [repository](https://github.com/lucasmarkes/hairline), and MIT-licensed package `@lucasmarkes/hairline`; its public [create and adopt workflows](https://hairline.lucasmarkes.com/skills) produce self-contained HTML figures. These are available sources, not globally installed capabilities or permission to add a project dependency.
 
 Choose the smallest route that fits:
 
@@ -26,7 +26,46 @@ Choose the smallest route that fits:
 - Choose one verified Hairline figure when its subject and behavior fit; import only that figure, preserve its accessible label and theme contract, and record the MIT notice with third-party material. Do not install misreported alias names.
 - Author a custom SVG/HTML figure, or use the official skill only when it is actually installed or installation is requested, when the product needs a distinct metaphor. Define the object, what the pointer changes, what the read-out says, the resting composition, and one bounded `intensity` parameter before drawing.
 
-For either implementation, keep the interaction legible and stable:
+### Catalog, create, or adopt
+
+| Route | Choose when | Boundary |
+| --- | --- | --- |
+| Existing project asset | Its metaphor, quality, and interaction already fit. | A newly discovered library is not a reason to replace it. |
+| Catalog figure | One catalog subject directly explains the feature in the established isometric line-art direction. | Choose one figure, not the collection. A decorative plot or simulated read-out is not a real data chart or live product telemetry. |
+| hairline-create | The style fits but the needed object or metaphor is absent. | The official workflow proposes concepts and then builds and self-checks the selected figure; it can skip concepts when the object and gesture are already chosen. A prompt or validator does not guarantee visual quality. |
+| hairline-adopt | An authorized SVG, icon, or logo supplies the identity and parts to preserve. | The workflow interprets and rebuilds the object as isometric solids; it does not trace or animate the source SVG. Compare source and output. If exact paths, colors, or proportions must stay untouched, use the original asset and a suitable motion route. |
+
+Use Hairline only when its restrained isometric line language fits the brand and slot. It is not a general illustration selector, a replacement for photography or editorial imagery, or a reason to turn every brand mark into a 3D object.
+
+### Asset adoption boundaries
+
+- **Runtime shape:** the reviewed package manifest at revision `37d2e78dcb333ab30c3338e28ed4a690364ea014` reports version `0.5.1`, no runtime dependencies, and an optional React peer of `>=18`. React consumers still need React; SVG describes the rendering format, not zero JavaScript. DOM functions and React wrappers are separate integration routes. Future installation uses the project's package manager and `@lucasmarkes/hairline`; this reference installs nothing.
+- **Performance:** the upstream engine uses a shared frame loop and suspends settled or offscreen work, but active pointer geometry, SVG node count, and an autonomous tour still cost time. Use the smallest useful number of instances and measure target-device frame time at the real slot size and intensity. SVG, zero runtime dependencies, and upstream optimization claims do not prove 60 fps.
+- **Semantics:** hide decorative or redundant artwork and remove focusable descendants; an exported decorative image uses empty alternative text. Give meaningful imagery a localized description. A figure with actual keyboard or group semantics cannot remain focusable while hidden. If interaction conveys essential information or an action, provide equivalent keyboard and touch access; otherwise do not invent a control.
+- **Reduced motion:** upstream documents that autonomous play rests under reduced motion. That does not establish a completely static product mode or prove every pointer response stops. Define a static rest composition or bounded reduced response, verify the initial preference and a live change, and keep all meaning available without hover or animation.
+- **SSR and hydration:** the reviewed React wrapper initially reserves an empty `5 / 4` box and mounts the drawing in a client effect; it has no built-in `use client` directive. Put it inside the appropriate client boundary in server-component frameworks. Plain DOM mounting requires an existing element. Verify hydration, reserved dimensions, and the first theme frame; a server-rendered box is not a server-rendered illustration.
+- **Lifecycle:** the React wrapper calls `destroy()` during cleanup, and plain DOM integrations must do the same through their host lifecycle. Test repeated mount, unmount, and route changes: removed listeners, observers, tours, callbacks, and loop registrations must stop without stopping surviving figures. Package cleanup does not prove generated custom code is leak-free.
+- **Rights and tooling:** the reviewed revision carries an MIT license; preserve its copyright and permission notice. Source SVGs, logos, trademarks, fonts, and other assets have separate rights. Official create/adopt workflows produce standalone HTML rather than a ready-made React component. Inspect any requested visual-check tool and its browser or dependency scope before running it.
+
+### Minimal demo acceptance proposal — not executed
+
+After a task authorizes the setup, run one catalog figure and one figure adopted from a user-owned SVG in the intended host. Keep the source SVG beside the adopted result for identity review.
+
+| Check | Evidence to capture |
+| --- | --- |
+| Composition and identity | Rest, pointer response, and return at real desktop and mobile slot sizes; light and dark themes; representative and maximum intensity; readable silhouettes and no clipping. The adopted result keeps the intended identity without implying exact path preservation. |
+| Frame cost | Record device, browser, refresh rate, frame intervals, and long frames during the same pointer or touch path, individually and together. Set the budget from the target refresh rate; `16.7 ms` is only a 60 Hz interval. Inspect rest, offscreen, and autonomous play if enabled. |
+| Reduced motion | Load with reduce enabled, toggle it while mounted, and exercise pointer input plus any autonomous tour. Verify the designed still or reduced response and retained meaning. |
+| Keyboard and touch | Essential meaning exists without hover; real controls have visible focus, decorative art adds no tab stops, and touch scrolling is not trapped. |
+| Host lifecycle | In an SSR host, check initial HTML, hydration warnings, first theme and size, and repeated development mounts. Unmount each figure while moving; its work stops, a surviving figure continues, and remount adds no duplicate DOM or handlers. |
+
+The version, package, wrapper, lifecycle, create/adopt, and license facts above were checked against the official repository and revision on 2026-11-08. No package or skill was installed, no figure was generated, and no demo or runtime test was performed.
+
+Pinned sources: [official README](https://github.com/lucasmarkes/hairline/tree/37d2e78dcb333ab30c3338e28ed4a690364ea014), [create/adopt overview](https://hairline.lucasmarkes.com/skills), [package manifest](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/packages/hairline/package.json), [React wrapper](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/packages/hairline/src/react.tsx), [DOM mount and lifecycle](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/packages/hairline/src/mount.ts), [shared stage engine](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/packages/hairline/src/core/stage.ts), [create instructions](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/skills/hairline-create/SKILL.md), [adopt instructions](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/skills/hairline-adopt/SKILL.md), and [MIT license](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/LICENSE).
+
+### Preserve pointer-response craft
+
+For catalog or authored figures, keep the interaction legible and stable:
 
 1. Hit-test against fixed rest or target geometry, never the currently animated edge; animated layers must not move their own hit area out from under the pointer.
 2. Spread response by distance from the active part and clamp its reach. Treat Hairline's published timing, falloff, spring, and frame values as source-specific defaults to test, not platform constants.

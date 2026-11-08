@@ -40,6 +40,10 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/stageshow-ui-demos.md`](references/stageshow-ui-demos.md): composition, cursor-demo, and review guidance for illustrative product scenes.
 - [`references/text-motion-vocabulary.md`](references/text-motion-vocabulary.md): names and accessible implementation briefs for six text-motion patterns.
 - [`references/ui-resource-index.md`](references/ui-resource-index.md): a selective index for finding UI components and interaction references.
+- [references/ai-interface-details.md](references/ai-interface-details.md): IME, streaming-follow, visual-boundary, concentric-radius, and split-workspace contracts.
+- [references/chart-selection-and-presentation.md](references/chart-selection-and-presentation.md): twelve chart candidates, seven presentation decisions, and checkable data and accessibility acceptance.
+- [references/gsap-lenis-react-bits.md](references/gsap-lenis-react-bits.md): dated selection, license, lifecycle, and acceptance boundaries for GSAP, Lenis, and React Bits.
+- [references/motion-curves-scenario-map.md](references/motion-curves-scenario-map.md): scenario-led linear, cubic-bezier, brand-curve, path, and spring selection.
 
 There are no scripts, runtime packages, generated assets, model credentials, or required MCP servers in this repository. The core workflow works with ordinary file inspection, editing, the project's existing toolchain, and direct runtime observation.
 
@@ -196,6 +200,10 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | Game hit feedback, button press/disabled feedback, Kanban/list switching, new-task dialogs, attachment states, or the eight component patterns | [`interaction-feedback-patterns.md`](references/interaction-feedback-patterns.md) | Controlled feedback intensity, native activation semantics, stable identity, interruption handling, and authoritative operation outcomes |
 | Illustrative product scene, authored cursor demo, or bento feature story | [`stageshow-ui-demos.md`](references/stageshow-ui-demos.md) | One action and payoff, authorized product evidence, truthful tile roles, and rendered wide/compact review |
 | Rendering, 2D/3D, generated media, glass, scroll video, or advanced interaction choice | [`technology-selection.md`](references/technology-selection.md) | Chosen layer, important constraint, dependency/asset boundary, runtime proof |
+| Chart selection or presentation | [chart-selection-and-presentation.md](references/chart-selection-and-presentation.md) | One encoding justified by the reader's question and data relationship, with truthful scales, structured detail, and target-runtime acceptance |
+| AI composer, streaming response, simplified AI surface, concentric cards, or resizable split workspace | [ai-interface-details.md](references/ai-interface-details.md) | IME-safe input, reading-intent-aware follow, preserved boundaries, consistent geometry, and cancellable/restorable resizing |
+| Linear, ease-in, ease-out, ease-in-out, or project-brand curve choice | [motion-curves-scenario-map.md](references/motion-curves-scenario-map.md) | A scenario-led curve, explicit ownership, interruption behavior, and reduced-motion result |
+| GSAP choreography, Lenis smooth scrolling, or one React Bits source candidate | [gsap-lenis-react-bits.md](references/gsap-lenis-react-bits.md) | Independent library choices, dated license/version boundaries, one-loop ownership, cleanup, and an executable acceptance plan |
 
 Load only the references that answer a real decision. Reading every reference for a small change adds noise and weakens the route.
 
@@ -208,7 +216,11 @@ The core does not require these tools or skills. When one is available and the t
 | `refero-design` | Bounded reference research for substantial web or product-screen design | Inspect user-supplied references, the current product, and relevant platform conventions. Do not claim live reference research. |
 | `design-taste-frontend` | Landing pages, portfolios, and suitable visual redesigns | Continue with the design read, existing system, and supplied references. Do not invent a substitute aesthetic. |
 | `emil-design-eng` or `apple-design` | Motion craft, gesture feel, springs, and spatial continuity | Use the state-transition contract and project/platform conventions in the core skill. |
+| `color-audit` | Diagnose gradient, boundary, shape-separation, and accent-hierarchy problems | Use the included color review and inspect actual themes, grayscale, and contrast. |
+| `drag-reorder-feel` | Add bounded parting and insertion feedback to an established reorder engine | Use the included drag-reorder recipe while preserving the project's activation, collision, auto-scroll, and commit logic. |
 | `oil-motion` | Scroll storytelling, asset planning, media compilation, and runtime mapping | Build the concept contract, storyboard, asset manifest, and deterministic frontend skeleton. Do not call an unconfigured generation provider. |
+| `hypit` | Author a product or marketing video with an appropriate video-tool route | Use an authorized existing video workflow or stop at a production plan; do not call an unconfigured provider. |
+| `spotkit` | Create an abstract functional-relationship illustration | Use project-native shapes or an existing authorized illustration; use Stageshow for product fragments and real screenshots for actual click locations. |
 | `morphicons` | Compatible stroke-glyph transitions between semantic icon states | Use stable project icons and a simpler state transition; preserve accessible names and state semantics. |
 | `3dviz-pro-max` | Grounded 3D explainers, spatial puzzles, and interactive scenes | Use the technology-selection questions directly and keep the deliverable within available 3D expertise and assets. |
 | `img2threejs` | Reference-image-to-editable procedural Three.js reconstruction | Use an existing licensed model, a project asset pipeline, or stop at a documented asset plan if reconstruction is essential. |

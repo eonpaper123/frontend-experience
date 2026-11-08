@@ -1,0 +1,22 @@
+# AI interface details: input, streaming, and split panes
+
+Use this reference for chat composers, streaming output, preview panes, and their container behavior. The five checks are independent; apply only those needed by the target interface.
+
+## Five behavior and geometry checks
+
+1. **IME confirmation must not send.** Use the editor's composition state and `KeyboardEvent.isComposing` so an IME confirmation Enter completes text composition without triggering the business action. Cover Enter, Shift+Enter, the submit button, and form submission. Do not add a global timer, user-agent branch, or legacy key-code patch from an unverified browser anecdote. If a target browser and IME still misfire, capture that real event order, fix the demonstrated path, and verify that a later independent Enter still submits. The [UI Events definition](https://www.w3.org/TR/uievents/#dom-keyboardevent-iscomposing) describes the composition flag; it does not prove identical browser behavior.
+2. **Streaming follow follows reading intent.** Before content grows, record whether the reader is at the bottom. Auto-follow only while that state remains active. Scrolling upward, dragging the scrollbar, or using keyboard navigation releases control immediately. When away from the bottom, expose a focusable “Jump to latest” control; restore following after that control is activated or the user deliberately returns to the bottom. New content must not steal focus. Image loading, reflow, and container resize must not pull a reader away from history. A line-count threshold is a tuning example, not a platform rule.
+3. **Remove decorative boxes without removing necessary boundaries.** Use spacing and surface changes when nested borders repeat the same hierarchy. Keep boundaries required for focus, input, selection, and high-contrast modes. Touch and keyboard behavior cannot depend on hover. Reserve stable border space or use outline/inset treatment so a selected stroke does not shift adjacent layout.
+4. **Concentric radii require matching geometry.** For truly nested curves with a uniform gap, `outer radius = inner radius + actual gap` is a useful starting relationship. Include border geometry in the gap. Do not apply the formula mechanically to pills, nonuniform padding, different corner families, or CSS radii clamped by element size. Inspect the corner gap at the actual dimensions and zoom.
+5. **Split panes must cancel, recover, and support keyboard input.** Record the starting ratio before drag and use the project's pointer-capture strategy. If an iframe requires a transparent interaction shield, create it only during the drag and always remove it on pointer up, cancellation, or lost capture. Escape restores the initial ratio; a committed pointer up stores the new ratio. Any double-click reset or collapse threshold must respect content minimums. A collapsed pane needs a reachable restore action, a defined focus destination, and preserved drafts. Provide a labeled, focusable separator with directional-key adjustment. The [APG Window Splitter pattern](https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/) is a semantics and keyboard candidate; its own page identifies the pattern as work in progress, so it is not a production component.
+
+## Target-runtime acceptance
+
+- Exercise a real Chinese IME: composition, cancellation, consecutive confirmations, and a deliberate send. When Safari is a supported target, use the real browser and IME rather than synthetic keyboard events.
+- During streaming, read older content with pointer, scrollbar, and keyboard; use Jump to latest; return to bottom; and load media that changes height. Reading position and focus must remain under user control.
+- Drag a splitter across preview content, cancel with Escape, lose pointer capture, resize to a narrow layout, collapse and restore, and adjust it by keyboard. The temporary shield must be gone afterward, and uncommitted ratios and content must remain intact.
+- Confirm focus and selected strokes do not move layout. Inspect touch, zoom, high contrast, and reduced motion.
+
+## Source and evidence boundary
+
+The interaction topics were inspired by the public Xiaohongshu note [“Five details for AI interfaces”](https://xhslink.cn/o/893y6m5Vac). This is an independently written engineering synthesis. It includes no source media or code, introduces no dependency, and does not claim that the source product, every browser, or a future implementation has passed these checks.

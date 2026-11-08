@@ -37,3 +37,16 @@ If deliberately translating design-tool tracking relative to font size, −2%/�
 - Inspect all shipped font weights after the webfont or app font has loaded, plus the intended fallback/loading state.
 - Check target viewport widths, orientation or window resizing, 200% zoom where applicable, and native text scaling.
 - Confirm semantic outline separately from visual hierarchy with accessibility tooling or the rendered accessibility tree.
+
+## Editorial text pass
+
+Apply this pass after the structural type roles exist. It sharpens editorial reading without forcing one specimen's font, scale, or language rules onto the product.
+
+1. **Make hierarchy express meaning.** Title, section, body, metadata, label, and caption roles should follow document priority and semantics. A hierarchy can fail when every level looks the same or when one display size overwhelms everything; the fix is not automatically a larger heading.
+2. **Tune line height with the real font and language.** `1.5` is a useful body-text starting point, while display headings often need a tighter value. Test the chosen font, weight, language, container, zoom, and user overrides rather than treating either number as a fixed token.
+3. **Control measure by script.** A `45–75` character range is a familiar Latin-reading candidate, not a universal count for CJK text. Judge Chinese, Japanese, and Korean measure by ideographic density, punctuation, line breaking, and the actual reading context.
+4. **Limit arbitrary display-font changes, not legitimate font roles.** A two-font guideline is a restraint against unrelated decorative faces, not a technical cap. CJK and Latin coverage, code, numerals, fallbacks, brand requirements, and font licensing can require more than two files or families.
+5. **Handle mixed CJK and Latin text without rewriting copy.** A source suggestion of roughly one quarter of an ideographic character's width can be a visual spacing candidate. Do not automatically insert spaces or alter user-authored content; check copying, search, selection, input, and localization before changing text or markup.
+6. **Respect language-aware punctuation and line breaking.** Avoid an isolated final character when a clean reflow is possible, but do not scatter nonbreaking spaces or hard line breaks that create overflow. Set the correct language metadata and test the target engine's real behavior. [Requirements for Chinese Text Layout](https://www.w3.org/TR/clreq/) is a reference for Chinese composition, not a guarantee of browser support.
+
+Inspect desktop and narrow layouts, zoom, user font scaling, fallback fonts, mixed-script copy, long unbreakable strings, selection, and print if print is in scope. This section defines a future review pass and makes no rendered-page claim.

@@ -25,6 +25,18 @@ Apply these questions only to the changed surface. The suggested corrections are
 
 Inspect the resulting target surface, not only its source: hierarchy, label wrapping, focus, contrast, responsive density, and representative data must remain usable. Use the core skill's verification gate; this checklist does not replace runtime acceptance.
 
+<a id="color-review"></a>
+## Color review
+
+When color itself is the reported problem, diagnose the changed surface before replacing its palette. If the optional `color-audit` skill is available, use it for this bounded review; otherwise apply the same core checks directly.
+
+1. Identify the actual failure: a muddy gradient, a vibrating boundary between similarly strong colors, merged adjacent shapes, a missing focus boundary, or an accent that overwhelms the task.
+2. Preserve existing brand and semantic tokens first. Candidate repairs include choosing adjacent hues, inserting an intentional intermediate stop, declaring the interpolation color space, adding a neutral separator, outlining one shape, or reducing the accent's area.
+3. Inspect color and grayscale at the real component size, in supported themes, and across the states that matter. Measure actual text, control, focus, and graphical-object contrast rather than judging a palette swatch alone.
+4. Treat numeric suggestions as contextual starting points: a `1–4 px` neutral divider, a `1–2 px` outline, or an accent occupying roughly `5–15%` of a composition can separate roles. A `60/30/10` distribution can help describe hierarchy, but it is not a layout quota or a reason to override the product's palette.
+
+Use the actual browser or platform renderer when gradients matter; interpolation behavior depends on the chosen color space and implementation. [CSS Color 4](https://www.w3.org/TR/css-color-4/#interpolation-space) defines the relevant web interpolation concepts. This section is an independent synthesis, includes no source media, and does not claim that a target surface was rendered or accepted.
+
 ## Source and limits
 
 This independent checklist was derived from a supplied @heydamir EmberAI financial-dashboard before-and-after breakdown. The comparison images and reported pixel annotations are not included and were not independently inspected for this reference, and no usability improvement was measured. This document preserves the reusable critique while making no claim about authorship, production performance, or a rendered result.
