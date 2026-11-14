@@ -49,7 +49,7 @@ For a broader choice between analytics, image-library, reading, and operations l
 
 For dashboard navigation, sidebar or menu selection, capsule navigation, icon rails, or switching among stores, projects, and other business objects, read [references/dashboard-menu-patterns.md](references/dashboard-menu-patterns.md). Choose by information architecture and interaction semantics, then keep selection, history, and displayed data synchronized; its six visual patterns are alternatives, not a mandatory skin.
 
-For de-AI UI critique, generic generated-looking UI, or template-like business-dashboard polish, read [references/de-ai-ui-checklist.md](references/de-ai-ui-checklist.md). Apply its checks to the changed surface even for a small UI task; preserve the brand, accessibility, useful density, project style, and real data instead of imposing a neutral-gray preset.
+For de-AI UI critique, generic generated-looking UI, or template-like business-dashboard polish, read [references/de-ai-ui-checklist.md](references/de-ai-ui-checklist.md). Apply its checks to the changed surface even for a small UI task; preserve the brand, accessibility, useful density, project style, and real data instead of imposing a neutral-gray preset. For a new identity, refresh, or critique spanning logo, type, and palette, read [references/brand-identity-system.md](references/brand-identity-system.md). Hold the three parts to one mechanism, apply the sector-default test, and keep measured gates separate from design judgement.
 
 For profile cards, team pages, or personal introductions, read [references/profile-card-layouts.md](references/profile-card-layouts.md) when layout direction is needed. Select by content priority; the twelve examples are alternatives, not a mandatory monochrome style.
 
@@ -149,7 +149,11 @@ For component motion timing or token review, read [references/component-motion-t
 
 For a practical press, menu/popover, tooltip, transform-origin, duration, or blur check, use the [seven practical motion checks](references/component-motion-tokens.md#emil-practical-checks). For a linear, ease-in, ease-out, ease-in-out, or brand curve decision, read [references/motion-curves-scenario-map.md](references/motion-curves-scenario-map.md). Both are scenario maps, not universal defaults or reasons to add JavaScript configuration.
 
+Before adding or reviewing interface motion, use [references/emil-animation-craft-bar.md](references/emil-animation-craft-bar.md) to decide whether the motion should exist and to check frequency, timing, origin, interruptibility, composited properties, reduced motion, asymmetric cause and response timing, and product cohesion. Treat its numeric values as scoped review heuristics within the user brief, platform conventions, accessibility needs, and established project motion system.
+
 For faux product UI, still or feature-card illustrations, authored cursor demos, or bento grids, read [references/stageshow-ui-demos.md](references/stageshow-ui-demos.md). Keep scenes illustrative rather than live product automation, and use the [UI resource index](references/ui-resource-index.md) and [interaction-feedback patterns](references/interaction-feedback-patterns.md) for source selection and real control semantics.
+
+For an anatomy sheet, redline, measured component specification, or structural-explainer film, read [references/dimensional-drawing-specs.md](references/dimensional-drawing-specs.md). Measure an existing UI, publish variables and closed formulas, mark unknowns `[TBD]`, and keep the drawing or film separate from runtime acceptance. For a persistent top-of-screen upload, timer, media, call, delivery, recording, build, score, approval, or concurrent-activity surface, read [references/islandcn-activity-stack.md](references/islandcn-activity-stack.md). Model stable activities across idle, compact, minimal, and expanded states; keep authoritative progress and outcomes outside the animation, and verify interruption, concurrency, accessibility, reduced motion, and cleanup.
 
 ## Preserve continuity in stateful motion
 
