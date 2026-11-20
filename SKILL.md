@@ -51,6 +51,8 @@ For dashboard navigation, sidebar or menu selection, capsule navigation, icon ra
 
 For de-AI UI critique, generic generated-looking UI, or template-like business-dashboard polish, read [references/de-ai-ui-checklist.md](references/de-ai-ui-checklist.md). Apply its checks to the changed surface even for a small UI task; preserve the brand, accessibility, useful density, project style, and real data instead of imposing a neutral-gray preset. For a new identity, refresh, or critique spanning logo, type, and palette, read [references/brand-identity-system.md](references/brand-identity-system.md). Hold the three parts to one mechanism, apply the sector-default test, and keep measured gates separate from design judgement.
 
+For a squint test, blur-assisted spacing review, optical whitespace, or visual-balance problem, use [the blur-assisted spacing check](references/de-ai-ui-checklist.md#squint-test). Temporarily suppress detail, inspect the four recorded spacing relationships, then remove the blur and recheck the actual UI. Preserve intentional asymmetry, project tokens, and typography; this does not replace contrast or accessibility checks.
+
 For profile cards, team pages, or personal introductions, read [references/profile-card-layouts.md](references/profile-card-layouts.md) when layout direction is needed. Select by content priority; the twelve examples are alternatives, not a mandatory monochrome style.
 
 For edge-to-edge mobile web, hybrid, or native layouts that can meet device cutouts or system chrome, read [references/safe-area-layout.md](references/safe-area-layout.md). Treat the current runtime container as the source of truth; third-party device lookups may explain a case but do not replace runtime insets or target-surface testing.
@@ -116,6 +118,8 @@ Before adopting a candidate, inspect its actual source, license, dependencies, p
 In the delivery summary, name the reused source, material adaptations, and applicable license boundary, or explain why new code was necessary. Reuse does not replace the skill's real-surface verification gate or authorize installation, migration, or publication.
 
 When the experience needs a technology choice, read [references/technology-selection.md](references/technology-selection.md). Existing frameworks are neither disposable nor untouchable: change a layer only for a concrete capability need, explain the cost, and keep the work within the requested scope.
+
+For WebGPU, WGSL, custom shaders, or vgpu work, read [the WebGPU engineering note](references/webgpu-shader-notes.md). Use typed shader boundaries, explicit GPU context and frame ownership, and a measured delivery budget. Consider vgpu only for a justified GPU workload on a supported target, not as a default frontend stack; mock checks and real-pixel regression establish different things.
 
 Choose the rendering and interaction layer from the desired experience, asset workflow, target devices, accessibility, runtime cost, and delivery constraints. A new library being installed globally as a skill does not install a runtime into the product.
 
@@ -229,7 +233,7 @@ Claim completion only from current-run evidence tied to the current build. Scree
 
 ## Design input-state microinteractions
 
-For an AI composer, streaming response pane, decorative-box reduction, concentric-card geometry, or resizable split workspace, read [references/ai-interface-details.md](references/ai-interface-details.md). Preserve IME composition, reading intent, focus and contrast boundaries, authoritative result state, and cancellable/restorable resize behavior; do not add timer patches or claim streamed success before the real result.
+For an AI composer, streaming response pane, message grouping, bubble spacing, action-row alignment, decorative-box reduction, concentric-card geometry, or resizable split workspace, read [references/ai-interface-details.md](references/ai-interface-details.md). For grouping work, use its [message-grouping recipe](references/ai-interface-details.md#message-grouping) to keep each utterance and its related media, user-facing status, files, and actions together, then recheck without blur. Preserve IME composition, reading intent, focus and contrast boundaries, authoritative result state, and cancellable/restorable resize behavior; do not add timer patches, expose private reasoning, or claim streamed success before the real result.
 
 Treat OTP, verification-code, PIN, and other segmented-input motion as feedback around a real form control, not as a replacement for input semantics. Keep one source of truth for the value and status. On the web, use text input semantics so leading zeroes survive, add an explicit label, set `inputmode="numeric"`, and put `autocomplete="one-time-code"` on the input that owns the code so operating-system autofill remains available.
 

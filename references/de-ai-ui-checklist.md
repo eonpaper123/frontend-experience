@@ -25,6 +25,20 @@ Apply these questions only to the changed surface. The suggested corrections are
 
 Inspect the resulting target surface, not only its source: hierarchy, label wrapping, focus, contrast, responsive density, and representative data must remain usable. Use the core skill's verification gate; this checklist does not replace runtime acceptance.
 
+<a id="squint-test"></a>
+## Blur-assisted spacing check
+
+Use this check when spacing, whitespace, or visual balance feels wrong even though the boxes are numerically aligned. Start from the established grid and spacing tokens, then temporarily suppress detail so visual weight is easier to compare. This is also useful outside de-AI critiques.
+
+**Set up the comparison.** Capture the current UI at its intended display size, duplicate the screenshot, and blur the duplicate until glyph detail recedes but groups remain distinguishable. A radius around `1–3%` of the reviewed region's short side is only a starting experiment; adjust for region size and display zoom. A temporary DevTools `filter: blur(12px)` on the inspected region is another preview, not production styling or a universal radius. Use the screenshot route when a live filter changes layout or positioning. Compare against the unblurred original, hide selection guides, and change one factor at a time.
+
+1. **Surrounding whitespace weight:** inspect all four sides and adjacent groups for an unintended heavy or cramped edge. Preserve deliberate asymmetry and hierarchy; equal perceived weight does not require equal pixel values.
+2. **Icon inside its control:** check whether the visible shape looks too high, low, left, or right. An icon may already be optically corrected. Keep any justified adjustment inside the component while preserving the external grid, hit area, and focus geometry.
+3. **Text-block side margins:** compare visible glyph edges with the intended text and container alignment, not only the text box. Correct an unintended cramped side while respecting font metrics, baselines, reading direction, and composition. Do not center every text block or force left/right equality. Reuse [responsive typography](responsive-typography.md) for type-system checks.
+4. **Card inner and outer spacing:** judge the relationship among content padding, intra-card groups, and gaps between cards. Express grouping with the project's token scale. Proportional rhythm is the goal, not identical inner/outer distances or a fixed ratio.
+
+Remove the blur and compare before/after at actual size and at the relevant viewport, theme, text-size, and zoom states. Recheck optical balance, glyph and baseline alignment, wrapping and clipping, focus visibility, hit areas, and actual text/control contrast. Accept only a correction that still works in the real UI. Blur suppresses detail while grayscale removes color cues; either can reveal a problem, but neither replaces contrast measurement, accessibility checks, interaction testing, or runtime acceptance.
+
 <a id="color-review"></a>
 ## Color review
 
