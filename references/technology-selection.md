@@ -32,6 +32,55 @@ Use this when a rendering, interaction, animation, sensing, or delivery-layer ch
 | Browser-based 2D rigid bodies, collisions, or constraints | Matter.js. For 3D physics choose a runtime-compatible 3D engine, not Matter.js. |
 | Agent-editable vector canvas, `.fig` conversion, or design-to-code handoff | [OpenPencil](https://github.com/ZSeven-W/openpencil) (MIT) when an editable JSON-based `.op` artifact, CLI/MCP canvas operations, or repeated frame/code export serves the workflow. Its implemented generators cover React, Vue, Svelte, HTML, Flutter, SwiftUI, Jetpack Compose, and React Native, but every output remains a scaffold requiring target-runtime review. |
 
+<a id="card-carousel-selection"></a>
+### Select the card-browsing form before the effect
+
+Start from what the user is doing, then preserve the project's existing component, renderer, and stateful gesture-settlement rules.
+
+| Task and content | Form and boundary |
+| --- | --- |
+| Image-led portfolio, gallery, or product hero where near/far depth is part of the presentation | A ring-depth carousel is a candidate when it has enough display area and the target devices can render it. `22` cards is the supplied demonstration workload, not a universal maximum. If an optional `kubai-ring-cards` skill is actually available, read it only after this form is selected; it is not bundled here. |
+| Recommendations, related images, or a sequence where order and readable text matter more than spatial drama | Prefer an ordinary horizontal scroller or carousel with explicit previous/next navigation. Reuse the existing component instead of introducing a ring renderer. |
+| Precise finding, filtering, or multi-item comparison—especially prices, specifications, or dense administration data | Prefer a grid, list, or comparison table. More than `30` items is a prompt to reassess browsing cost in the supplied brief, not an automatic layout switch. |
+
+A visual ring does not make the logical reading order circular. Keep stable item identity and order, a readable current-item name, previous/next controls, keyboard access to the ring and any exposed settings, and no duplicate invisible cards in the accessibility tree. If the product adds automatic rotation, provide stop/resume and pause it for focus and hover as applicable; use the [WAI carousel pattern](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) as a semantics and control reference, not as proof that the visual implementation is accessible.
+
+#### Demonstration starting values
+
+Use these only when reproducing the supplied ring-depth direction. They are adjustable starting values, not platform limits or requirements for ordinary carousels.
+
+| Parameter | Starting value | Interpretation and correction |
+| --- | --- | --- |
+| Inside perspective | `860px` | One of two view-specific perspective values. With the source projection `P / (P - z)`, a smaller `P` creates stronger perspective; it does not make the scene flatter. `600px` was a source-panel lower bound, not a universal safe value. See [MDN perspective](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/perspective#description). |
+| Outside perspective | `1500px` | Keeps the outside ring visually gentler than the inside view; verify the relation at the real frame size. |
+| Glass rim | `160px` on each side; `25%` dispersion | Wider rims consume more content. Treat the percentage as source tuning, not a physical material constant. |
+| Outside depth | maximum `14px` blur; `50%` far fade | Blur increases as cards move away from the focus region. The source fade mixes toward the page background; it is not equivalent to setting card alpha to `0.5`. |
+| Cards | `180 × 300px`, `18px` gap, `22` cards | Workload and rhythm from the demonstration, not universal geometry or a hard count ceiling. |
+| Fluid flow | `20%` | A source slider value for gradient motion, not a normalized performance measure. |
+| Continuous corner | `32px` | A source corner radius. It does not mean the card outline should deform arbitrarily with the ring radius. |
+
+The source brief's warnings above `20px` blur or below `35%` fade are visual tuning cues, not readability or performance laws. The source control model has seven parameter classes: Perspective (two view-specific values), Glass rim, Dispersion, Flow, Corner, Depth blur, and Far fade. It exposes five rows in each view because Perspective differs by view and several controls are shared. Do not reproduce an inconsistent “six controls” label or force the panel into a production surface when it is only a development aid.
+
+#### Implementation contract
+
+- Preserve one set of card identities while a signed curvature moves through the expanded state between inside and outside views. Do not rebuild two unrelated carousels or instant-swap them. Keep the selected renderer's drag, release velocity, snap, bounds, and new-input-interrupts-old-motion rules. Preserve its near-eye clipping and verify a valid depth range at the target frame sizes so `P - z` does not approach or cross zero and invert the projection.
+- For the full glass rim, render the cards into a texture, then apply bounded edge displacement and chromatic sampling. A clip or mask constrains pixels but does not create refraction. Inspect for fold-back, repeated cards, seams, and color separation that obscures content.
+- In the outside view, keep the center clear and increase blur/fade with distance. The source renderer uses per-pixel coverage, card margins, and image mipmaps; a `backdrop-filter` over moving content is not equivalent and can shimmer.
+- Preserve the front/back image direction. The source turn is an `1800ms` overall progression with nonlinear lag based on arc distance. A separate `40–80ms` stagger suggestion is a different timing model; do not layer the two or claim they are equivalent.
+- In reduced motion, stop fluid motion and card flipping and present a clear static destination while retaining view switching, navigation, and card access. Do not freeze the interface or silently substitute a simplified CSS renderer when the selected GPU path is unavailable; a renderer change is a new technical decision.
+- Measure the actual device, frame, pixel density, and card content. The source's `60fps` target and instruction to reduce blur below `45fps` are unverified tuning notes, not current-project evidence or permission for automatic quality degradation. If the selected route misses its target, identify the bottleneck and adjust only within the approved design.
+
+#### Acceptance for the ring-depth route
+
+- At the demonstration defaults, the inside composition shows the intended five-card rhythm and the outer cards approach the glass without folds, repeated cards, or gaps. Other frames use their selected composition rather than forcing five items.
+- Changing inside/outside view bends the same card set continuously. Reversing or interrupting the change preserves identity and settles on a valid view without a jump.
+- The outside focus region stays clear; blur increases with distance up to the selected maximum, far fade mixes toward the actual page background, and no hard blur edge or shimmer appears while cards move.
+- Card backs remain correctly oriented. If a turn sequence is used, it progresses from the selected center relationship and can reverse or be interrupted without combining incompatible stagger systems.
+- Every exposed control updates the intended parameter and reset restores the documented values. The logical current item, focus, screen-reader order, keyboard and touch navigation, light/dark background behavior, and reduced-motion presentation remain valid.
+- Verify real frame time rather than inheriting the source's target. Ordinary motion and reduced motion are separate acceptance states.
+
+This is an independently written selection and engineering synthesis based on a supplied ring-card brief credited to @kubai087. No demonstration source code, screenshots, videos, card images, or fluid-gradient assets are included; their redistribution rights were not established. Use project-owned or separately licensed media, preserve any notices on reused code, and inspect an optional specialist's current source and terms before adaptation.
+
 ### 3D asset creation, viewing, and delivery
 
 Keep creation, display, and handoff as separate boundary decisions:

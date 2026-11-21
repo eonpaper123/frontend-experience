@@ -15,7 +15,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 ## What is included
 
 - [`SKILL.md`](SKILL.md): the core workflow and its routing rules.
-- [`references/technology-selection.md`](references/technology-selection.md): rendering, 2D/3D, motion, canvas, media, WebGPU, and interaction-layer choices.
+- [`references/technology-selection.md`](references/technology-selection.md): rendering, 2D/3D, motion, canvas, media, WebGPU, card-carousel selection, and interaction-layer choices.
 - [`references/webgpu-shader-notes.md`](references/webgpu-shader-notes.md): typed WGSL boundaries, explicit context/frame ownership, measured delivery budgets, and mock-versus-real-pixel evidence.
 - [`references/motion-description-vocabulary.md`](references/motion-description-vocabulary.md): turns conversational motion language into testable behavior contracts.
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
@@ -36,7 +36,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/pixel-game-fx.md`](references/pixel-game-fx.md): optional procedural pixel-art effects for games, with export and license checks.
 - [`references/proui-professional-ui.md`](references/proui-professional-ui.md): selection, licensing, and interaction contracts for professional workstation UI.
 - [`references/reactdrops-component-patterns.md`](references/reactdrops-component-patterns.md): source, license, dependency, and runtime checks for selective ReactDrops reuse.
-- [`references/reference-first-ui.md`](references/reference-first-ui.md): question-led reference research, anti-template checks, and a bounded glass-refraction appendix.
+- [`references/reference-first-ui.md`](references/reference-first-ui.md): question-led reference research, a three-stage whole-site workflow, anti-template checks, and a bounded glass-refraction appendix.
 - [`references/responsive-typography.md`](references/responsive-typography.md): semantic, fluid, and language-aware type-system guidance.
 - [`references/safe-area-layout.md`](references/safe-area-layout.md): safe-area ownership for web, hybrid, and native layouts.
 - [`references/six-popup-types.md`](references/six-popup-types.md): task-led selection and semantic contracts for six popup and overlay patterns.
@@ -44,7 +44,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/six-component-interactions.md`](references/six-component-interactions.md): six stateful app and Mini Program interaction recipes.
 - [`references/stageshow-ui-demos.md`](references/stageshow-ui-demos.md): composition, cursor-demo, and review guidance for illustrative product scenes.
 - [`references/text-motion-vocabulary.md`](references/text-motion-vocabulary.md): names and accessible implementation briefs for six text-motion patterns.
-- [`references/ui-resource-index.md`](references/ui-resource-index.md): a selective index for finding UI components and interaction references.
+- [`references/ui-resource-index.md`](references/ui-resource-index.md): a selective index for UI components, page-role design references, and contract-led delivery.
 - [references/ai-interface-details.md](references/ai-interface-details.md): IME, streaming-follow, message-grouping, visual-boundary, concentric-radius, and split-workspace contracts.
 - [references/chart-selection-and-presentation.md](references/chart-selection-and-presentation.md): twelve chart candidates, seven presentation decisions, and checkable data and accessibility acceptance.
 - [references/gsap-lenis-react-bits.md](references/gsap-lenis-react-bits.md): dated selection, license, lifecycle, and acceptance boundaries for GSAP, Lenis, and React Bits.
@@ -188,6 +188,9 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | --- | --- | --- |
 | No explicit color direction and no governing brand or project palette | [`color-pair-palette.md`](references/color-pair-palette.md) | One role-assigned candidate pair, preserved semantic colors, and measured foreground/background contrast |
 | Unsettled visual direction, missing references, generic template result, or sampled refractive glass | [`reference-first-ui.md`](references/reference-first-ui.md) | References chosen by the missing decision, concrete project adaptations, one representative render comparison, or a bounded sampling contract |
+| New whole site, whole-site redesign, screen-by-screen prototype, or cross-screen continuity | [`reference-first-ui.md#website-craft`](references/reference-first-ui.md#website-craft) | Selected desktop/mobile prototypes, one representative implemented screen, explicit cross-screen motion ownership, font rights, and runtime acceptance |
+| Navigation, hero, footer, CTA, design-system styling, 3D icon, or scroll-composition reference after the direction is settled | [`ui-resource-index.md#design-reference-resources`](references/ui-resource-index.md#design-reference-resources) | One source tied to a missing decision, a project-token adaptation, and explicit rights/runtime unknowns |
+| Shared shell and interface coordination for already-divided page sections | [`ui-resource-index.md#contract-led-delivery`](references/ui-resource-index.md#contract-led-delivery) | Shared contracts proven first, narrow ownership, and claims checked against the rendered result without adopting a fixed candidate recipe |
 | Dashboard, analytics, operations console, dense admin surface | [`dashboard-composition.md`](references/dashboard-composition.md) | Decision-led hierarchy, representative data states, density and navigation acceptance |
 | Dashboard sidebar, top navigation, icon rail, or multi-object switcher | [`dashboard-menu-patterns.md`](references/dashboard-menu-patterns.md) | A task-led navigation pattern with correct semantics, route or object state ownership, and responsive interaction acceptance |
 | De-AI UI critique, generic generated-looking UI, business-dashboard polish, squint test, or optical spacing review | [`de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md) | A scoped correction that preserves brand, accessibility, useful density, project style, truthful data, and unblurred runtime acceptance |
@@ -208,6 +211,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | UI anatomy sheet, redline, measured specification, or structural-explainer film | [`dimensional-drawing-specs.md`](references/dimensional-drawing-specs.md) | Variable-based drawing from real measurements, visible unknowns, closed formulas, and an inspected delivery render |
 | Persistent upload, timer, media, call, delivery, recording, build, score, approval, or concurrent activity surface | [`islandcn-activity-stack.md`](references/islandcn-activity-stack.md) | Stable activity identity, compact, minimal, and expanded states, truthful lifecycle, interruption, concurrency, and accessible controls |
 | Rendering, 2D/3D, generated media, glass, scroll video, or advanced interaction choice | [`technology-selection.md`](references/technology-selection.md) | Chosen layer, important constraint, dependency/asset boundary, runtime proof |
+| Card carousel, ring-depth showcase, 3D carousel, image sequence, or dense card comparison | [`technology-selection.md#card-carousel-selection`](references/technology-selection.md#card-carousel-selection) | A task-led form choice, corrected source parameters when ring depth is selected, accessible navigation, reduced motion, and measured target-device evidence |
 | WebGPU, WGSL, custom shader, vgpu, or GPU pixel-regression work | [`webgpu-shader-notes.md`](references/webgpu-shader-notes.md) | A justified GPU route, typed boundary, explicit context/frame owner, measured delivery budget, and separate mock versus real-pixel evidence |
 | Chart selection or presentation | [chart-selection-and-presentation.md](references/chart-selection-and-presentation.md) | One encoding justified by the reader's question and data relationship, with truthful scales, structured detail, and target-runtime acceptance |
 | AI composer, streaming response, message grouping, bubble spacing, action alignment, simplified AI surface, concentric cards, or resizable split workspace | [ai-interface-details.md](references/ai-interface-details.md) | IME-safe input, reading-intent-aware follow, clear turn ownership, preserved boundaries, consistent geometry, and cancellable/restorable resizing |

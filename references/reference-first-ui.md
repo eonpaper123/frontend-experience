@@ -64,6 +64,60 @@ Preserve the rest of the product, brand, and behavior. Deliver an observed
 before/after comparison on the target surface and identify anything not tested.
 ```
 
+<a id="website-craft"></a>
+## Three-stage whole-site workflow
+
+Use this workflow for a new site or a whole-site visual redesign, especially when the experience is a sequence of connected screens. Keep the reference analysis and project direction above. Reuse an already approved prototype, and do not restart the whole-site process for a local correction inside an established direction. This workflow does not authorize a dependency installation or unrelated production change.
+
+### 1. Confirm the screen-by-screen prototype
+
+```text
+From <product idea, audience, content, brand, and target devices>, describe one
+coherent site direction and prepare a prototype for every screen or major
+section. Mark the position and hierarchy of copy, images, navigation, controls,
+and important UI. Show how each screen changes on desktop and mobile, and name
+the subject or relationship that carries the reader into the next screen.
+
+Use real content when available and label every placeholder. Deliver the
+prototypes for design review before implementing the complete site.
+```
+
+Make the unresolved design choices visible in the prototypes: content density, hierarchy, media ownership, navigation, responsive changes, and the object or visual relationship that joins adjacent screens. Do not treat an agent's self-review, an inspiration image, or technical feasibility as design acceptance. The user or an explicitly authorized design owner can approve the unresolved direction; when that authority has already selected the prototype, record it in the existing project context and proceed without asking again. Prepare the prototype to a reviewable state before requesting a choice rather than using approval as a reason not to design.
+
+### 2. Build from the selected prototype
+
+Map each screen's layout, content hierarchy, assets, and interaction to the project's existing components and tokens. First verify one representative screen at its real target sizes, then extend the same approved direction to the remaining screens. Routine implementation choices remain technical decisions. If missing content or a platform constraint would materially change the composition, revise only the affected prototype and return that design choice to the authorized owner; do not silently replace the direction in code.
+
+### 3. Upgrade cross-screen motion and typography
+
+```text
+Design the site's cross-screen motion around <selected prototype and existing
+stack>. For each adjacent pair of screens, name the continuing subject, its
+start and end geometry, the enter/hold/exit range, the scroll relationship, and
+the reverse path. Keep one coherent rhythm without giving every screen the same
+duration or repeating the same entrance effect.
+
+Use the project's existing motion layer where it can preserve that contract. If
+the site already uses GSAP, or GSAP ScrollTrigger has been explicitly selected,
+map the ranges there. Otherwise describe the equivalent implementation in the
+current stack. Preserve navigation, focus, reading order, and a designed
+reduced-motion result.
+```
+
+Write the continuity contract before selecting an API. When no established engine owns the route and the project permits the dependency, the source workflow uses [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) as its reference default for named ranges, scrubbed progress, and intentional pinning; clean up triggers with the component lifecycle. In an existing React and Motion stack, [Motion's `useScroll` and `useTransform`](https://motion.dev/docs/react-scroll-animations) can map the same section progress to the continuing subject. Another established engine can do the same when it owns one normalized range and preserves start/end geometry, hold, reverse behavior, interruption, and cleanup. Do not migrate frameworks or add GSAP solely because it appears in the prompt. Only when a concrete effect remains unresolved should a project inspect a specific Codrops or Creative Hub example; verify the selected repository, code, image, and font rights, adapt only the relevant mechanism, and do not add WebGL merely to imitate an unrelated demonstration.
+
+For typography, gather a small set of relevant references—`3–5` is a useful starting range, not a quota—and record what each one changes. Pinterest searches such as `typography design` or `typography website` are optional discovery routes, not proof of source rights. Analyze type character, heading/body/label roles, weight and width, line length and height, grid, alignment, and whitespace, then map only the useful decisions into the prototypes and [responsive typography](responsive-typography.md). Select a font only after checking the actual package's license, required scripts and weights, embedding/distribution terms, and rendered behavior. “Free” is not a license; the [SIL Open Font License text](https://openfontlicense.org/open-font-license-official-text/) has conditions including notice and Reserved Font Name rules. Preserve the applicable files and notices.
+
+### Whole-site acceptance
+
+- Each desktop and mobile screen corresponds to the selected prototype's subject, copy, media, controls, position, and hierarchy; every material deviation has an accepted reason.
+- The continuing subject remains identifiable at the start, middle, and end of each transition. Forward scroll, reverse scroll, stopping, fast traversal, resize, and content reflow do not produce jumps, duplicate subjects, or unexplained object swaps.
+- Motion timing reflects content priority. Enter, hold, and exit ranges are explicit, interruptible, and owned by one system; unrelated per-screen reveals do not masquerade as site-level continuity.
+- The adopted font has a recorded source, version, and license. Required notices remain, and language coverage, weight availability, loading, wrapping, and layout have been observed in the target runtime.
+- Reduced motion removes unnecessary cross-screen travel, scaling, and continuous movement while retaining the same content, navigation, focus order, and controls in a composed static or short-feedback state.
+
+This is an independently written workflow derived from a supplied whole-site design brief credited to @momo. It includes no source screenshots, video, font files, third-party example code, or proprietary assets, and it does not claim that Pinterest, Codrops, or any optional specialist was accessed. Verify the selected example and asset rights before reuse.
+
 ## Eight anti-template checks
 
 These checks protect decisions; they do not impose a universal skin.

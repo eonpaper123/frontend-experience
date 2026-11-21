@@ -37,7 +37,11 @@ Use `refero-design` for reference research and synthesis on substantial web or p
 
 For reference-first UI, missing visual references, or a generic result caused by an unexamined template choice, read [references/reference-first-ui.md](references/reference-first-ui.md). Select sources by the unresolved design question, explain their concrete structure and project adaptation before coding, then compare the rendered result. Reference count and stylistic bans are not quality gates.
 
+For a new whole site, a whole-site visual redesign, screen-by-screen narrative, or cross-screen continuity problem, use [the three-stage website workflow](references/reference-first-ui.md#website-craft). Confirm the unresolved prototype direction before implementing the complete site, then upgrade cross-screen motion and typography. Reuse an already approved prototype, and proceed under an explicitly delegated design decision without asking again; local fixes keep their established direction. The copyable prompts and GSAP/other-stack mappings are implementation aids, not permission to add a dependency.
+
 Lock an actionable direction before building: primary reference or existing system, traits to preserve, required states, asset strategy, and meaningful deviations. A short explanation or an update to an existing project design document is enough. Do not create a separate document for every component change.
+
+When the direction is settled but navigation, hero, footer, CTA, system styling, 3D icons, or scroll composition still needs one concrete reference, use [the design-reference resource index](references/ui-resource-index.md#design-reference-resources). Select only the source that answers the missing decision, and distinguish inspiration, licensed assets, and reusable code.
 
 When no color direction is specified and no existing brand or project palette governs the surface, choose one pair from [references/color-pair-palette.md](references/color-pair-palette.md). Treat it as a candidate pool instead of inventing a generic purple-blue gradient; preserve semantic colors and measure the actual foreground/background contrast before adoption.
 
@@ -75,7 +79,7 @@ Every named external skill, tool, service, and provider below is optional unless
 | --- | --- |
 | Diagnosing a muddy gradient, vibrating color boundary, merged shapes, or weak accent hierarchy | The optional color-audit skill when available; otherwise use the included [color review](references/de-ai-ui-checklist.md#color-review). Preserve brand and semantic tokens, then inspect actual contrast and themes. |
 | Adding parting, insertion-line, and cursor feedback to an existing reorder interaction | The optional drag-reorder-feel skill when available; otherwise use the included [drag-reorder recipe](references/interaction-feedback-patterns.md#drag-reorder-feel). The established drag engine still owns activation, collision, auto-scroll, cancellation, and commit. |
-| Authored product or marketing video | The optional hypit skill when available. Consult its video-tool selection guidance for the requested deliverable; do not install a provider or call one without the required authorization and credential. Website scroll-media behavior remains an oil-motion concern. |
+| Authored product, launch/update, marketing, promo, or rendered-demo video | The optional `hypit` skill when available. Read its video-tool selection guidance before choosing a production tool; it routes video workflows but does not require Hypit as the renderer. Do not claim the skill is present, install a missing tool, or call an external generation provider without the task's authorization and credential. Website scroll-media behavior remains an `oil-motion` concern. |
 | Abstract functional-relationship illustration for a product surface | The optional spotkit skill when available. Use Stageshow for a recognizable illustrative product fragment and a real screenshot when the user must see an actual click location. Preserve brand, unique inline-SVG IDs, theme variants, and meaningful text alternatives; inspect the rendered size and theme. |
 | Reference-led web/product-screen design | `refero-design` for research and synthesis, proportional to the missing decisions. |
 | Reference-first direction for an unresolved UI question | The optional `reference-first-ui` skill when installed; otherwise use this repository's included reference-first workflow and the product's available evidence. Do not claim external catalog access that did not occur. |
@@ -125,6 +129,8 @@ Choose the rendering and interaction layer from the desired experience, asset wo
 
 Build the smallest usable slice that demonstrates the central interaction. Preserve unrelated work, product contracts, and project ownership. Resolve conflicting animation ownership rather than letting two libraries update the same property independently.
 
+When independent page sections are already being divided among contributors, use [the contract-led delivery note](references/ui-resource-index.md#contract-led-delivery). Prove the shared shell, tokens, interfaces, and motion ownership first; keep file ownership narrow and judge claims against the rendered result. This is not a requirement to parallelize, create agents, or adopt a candidate workflow's fixed visual recipe.
+
 ### Use community component snippets selectively
 
 For ReactDrops, AI-ready component briefs, Showcase Pointer, Refracted Text, Fractal Glass, Liquid Glass Logo, or Liquid Glass Orb, read [references/reactdrops-component-patterns.md](references/reactdrops-component-patterns.md). Select one fitting drop, verify its source and custom license, and adapt the brief to the existing project; this does not install a component or replace the motion and glass rules.
@@ -166,6 +172,8 @@ For button press and release feedback or disabled-action feedback, read [referen
 For Kanban/list switching, new-task forms, or attachment-state feedback in a project-management or CRM surface, read the [task-workspace interaction recipe](references/interaction-feedback-patterns.md#task-workspace-feedback). Preserve task identity and editing context; demonstration typing, file rows, and dialog closure are not proof of real input, upload, or save success.
 
 For send buttons, long-press action menus, accordions, multi-select action bars, quantity steppers, flip cards, filter chips, or step progress, read the [eight component interaction patterns](references/interaction-feedback-patterns.md#component-interaction-patterns). Select by the actual action and missing state feedback, not as eight effects to apply everywhere.
+
+For a card carousel, ring-depth card showcase, 3D carousel, or ring cards, read [the card-carousel selection reference](references/technology-selection.md#card-carousel-selection) before choosing the form. Use ring depth only for an image-led showcase where the spatial treatment serves the brief; prefer ordinary horizontal browsing for a readable sequence and a grid, list, or table for finding or comparing items. An optional `kubai-ring-cards` skill is not bundled and should be read only when it is actually available and its ring treatment has been selected.
 
 For improving the feel of an existing list, board, layer, or tag-row reorder interaction, read the [drag reorder recipe](references/interaction-feedback-patterns.md#drag-reorder-feel). Preserve the current engine's activation, pickup offset, collision, auto-scroll, cancellation, and logical commit; the recipe adds only bounded visual feedback.
 
