@@ -19,12 +19,11 @@ The skill does not impose a house aesthetic, framework, component library, or an
 - [`references/webgpu-shader-notes.md`](references/webgpu-shader-notes.md): typed WGSL boundaries, explicit context/frame ownership, measured delivery budgets, and mock-versus-real-pixel evidence.
 - [`references/motion-description-vocabulary.md`](references/motion-description-vocabulary.md): turns conversational motion language into testable behavior contracts.
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
-- [`references/color-pair-palette.md`](references/color-pair-palette.md): eight optional contrasting color pairs with role, contrast, and print boundaries.
 - [`references/dashboard-composition.md`](references/dashboard-composition.md): composition patterns and acceptance checks for dense data surfaces.
 - [`references/dashboard-menu-patterns.md`](references/dashboard-menu-patterns.md): six task-led navigation patterns with semantic, state, responsive, and data-consistency checks.
 - [`references/dashboard-patterns.md`](references/dashboard-patterns.md): task-led alternatives for analytics, image collections, reading spaces, and operations dashboards.
 - [`references/de-ai-ui-checklist.md`](references/de-ai-ui-checklist.md): a scoped critique for generic generated-looking business UI, including a blur-assisted optical-spacing check.
-- [`references/brand-identity-system.md`](references/brand-identity-system.md): a cohesive logo, typography, and palette workflow with evidence and handoff boundaries.
+- [`references/brand-identity-system.md`](references/brand-identity-system.md): context-led brand color for any new or changed palette, plus cohesive logo, typography, and full-identity workflows when required.
 - [`references/dimensional-drawing-specs.md`](references/dimensional-drawing-specs.md): measured UI anatomy sheets, variable-based specifications, and structural-explainer motion.
 - [`references/emil-animation-craft-bar.md`](references/emil-animation-craft-bar.md): delete-first motion standards for purpose, timing, interruption, performance, and accessibility.
 - [`references/ely-gpui-components.md`](references/ely-gpui-components.md): an optional Rust/GPUI component reference with platform and license boundaries.
@@ -186,7 +185,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 
 | Task signal | Load | Output expected |
 | --- | --- | --- |
-| No explicit color direction and no governing brand or project palette | [`color-pair-palette.md`](references/color-pair-palette.md) | One role-assigned candidate pair, preserved semantic colors, and measured foreground/background contrast |
+| Any new or materially changed color direction, including no supplied palette | [`brand-identity-system.md#brand-color-system`](references/brand-identity-system.md#brand-color-system) | A context-derived brand color mechanism, named roles and tokens, reasoned differentiation, measured contrast, and a settled representative application before implementation |
 | Unsettled visual direction, missing references, generic template result, or sampled refractive glass | [`reference-first-ui.md`](references/reference-first-ui.md) | References chosen by the missing decision, concrete project adaptations, one representative render comparison, or a bounded sampling contract |
 | New whole site, whole-site redesign, screen-by-screen prototype, or cross-screen continuity | [`reference-first-ui.md#website-craft`](references/reference-first-ui.md#website-craft) | Selected desktop/mobile prototypes, one representative implemented screen, explicit cross-screen motion ownership, font rights, and runtime acceptance |
 | Navigation, hero, footer, CTA, design-system styling, 3D icon, or scroll-composition reference after the direction is settled | [`ui-resource-index.md#design-reference-resources`](references/ui-resource-index.md#design-reference-resources) | One source tied to a missing decision, a project-token adaptation, and explicit rights/runtime unknowns |

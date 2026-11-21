@@ -1,8 +1,48 @@
 # Brand identity as one system
 
-Use this reference for a new identity, a refresh, a critique, or any combination of logo, typography, and palette. It is not a landing-page style recipe. The goal is a coherent identity whose parts can be explained, checked, compared, and handed to implementation.
+Use the context-led color section for every new or materially changed color direction. Use the full reference for a new identity, refresh, critique, or any combination of logo, typography, and palette. It is not a landing-page style recipe. The goal is a coherent identity whose parts can be explained, checked, compared, and handed to implementation.
 
 This guide is an independent synthesis informed by the MIT-licensed [Brand Identity skill](https://github.com/fatihaydost/brand-identity-skill). The repository license was checked on 2026-11-15. This repository does not redistribute that skill's scripts, templates, fonts, or generated assets.
+
+<a id="brand-color-system"></a>
+## Establish a context-led brand color system before implementation
+
+The goal is not to choose an attractive fallback when colors are unspecified. First establish why this product should use color in a particular way, then implement it. Existing briefs, brand guidelines, approved directions, design tokens, and real product surfaces are authoritative. User-retained colors and identity assets are constraints; do not recolor them because a new method or aesthetic preference is available. For a local correction, repair only the affected roles rather than reopening the identity.
+
+### 1. Derive a color proposition from the product context
+
+Read the available evidence and resolve only gaps that would change the direction:
+
+- product purpose, subject/content, primary task, and use context;
+- audience and actual users, cultural or regional context, platform, and environment;
+- brand personality, voice, and the distinction that matters against relevant alternatives;
+- existing logo, imagery, material, product color, competitors, and identity signals that must remain; and
+- functional constraints from data, statuses, accessibility, relevant themes, and real backgrounds.
+
+Turn that evidence into one mechanism sentence, such as: “Because `<purpose/users/context>`, color should use `<relationship or behavior>` to express `<brand personality/difference>` while keeping `<critical content/action>` clear.” The sentence must explain the later roles; “premium,” “warm,” and “modern” do not. Choose only the decision dimensions needed for this color judgement and apply the sector-default test below. The two-to-four axes in the full identity workflow are a comparison method for formal identity sets, not a required step for ordinary color work. Do not preselect temperature, lightness, chroma, candidate count, or color count.
+
+Use external references only when a real question remains—for example, separating brand and semantic colors in this category or checking a cultural conflict. Project evidence can be sufficient; color selection does not require a catalog visit, moodboard, or imitation of another brand.
+
+### 2. Define roles before exploring colors
+
+Before selecting values, list the roles the product actually needs: canvas and surfaces, primary and secondary text, main brand expression, primary action, supporting action, borders and focus, selection, success/warning/error/information, data series, and overlays on imagery. Keep brand roles separate from semantic status roles. Do not create unused roles merely to make the system look complete. Design multiple themes only when the product supports them, while preserving role relationships and recognizable identity.
+
+Explore relationships from the mechanism sentence. Hue, lightness, chroma, temperature, ground, adjacency or contrast, and visual weight in the real composition may all vary. The brief and content determine candidate count, color families, proportions, and style. Monochrome, analogous, multicolor, high-chroma, low-chroma, light-ground, dark-ground, or no decorative accent can all be valid. Do not default to green, dark, light, desaturated, saturated, a neutral base, a small accent, fixed proportions, fixed color counts, or a preset pair. Do not substitute generic color-psychology claims for a product-specific reason.
+
+### 3. Settle the direction before UI color implementation
+
+Compare candidates with the same representative content and target surface rather than isolated swatches:
+
+1. Explain how each role answers the purpose, users, context, personality, and differentiation. Apply the sector-default test below and remove familiar answers that the brief cannot justify.
+2. Inspect hierarchy, content density, image backgrounds, states, and interactions in a representative page or component; a logo or one button cannot stand in for the product.
+3. Measure the actual text, control, focus, and required graphical contrast. Preserve non-color cues for state, and inspect relevant themes and the actual renderer or device.
+4. Separate measured gates from judgement. Contrast and license results can reject a candidate; brand fit, differentiation, and expression remain reasoned design judgements, not conversion or universal psychology claims.
+
+Settle the color direction, role relationships, and representative application before implementing color across the interface. If an unresolved brand choice would materially change the result, the user or authorized design owner chooses it. If design judgement has already been delegated, make a clear recommendation, record the rationale, and continue without adding an approval ceremony. Produce a full identity, logo/type system, or multiple formal identity sets only when the task requires them.
+
+### 4. Hand off an implementable system
+
+Deliver named roles and design tokens rather than loose hex values. For each role, record purpose, allowed foreground/background combinations, relevant theme mapping, semantic boundaries, and measured results. Record what was preserved, why the direction fits, how it differs from a generic sector answer, and which backgrounds or devices remain unverified. The real page still needs acceptance with representative content, states, responsive sizes, and interaction; a palette sheet or passing contrast script is not brand-experience acceptance.
 
 ## Start with one mechanism
 

@@ -4,7 +4,7 @@ Use this critique lens for requests to remove an "AI look," correct generic gene
 
 ## Seven lessons
 
-1. **Reduce competing surface effects.** When broad purple-blue gradients, glow, or glass obscure financial or operational content, simplify to controlled neutral surfaces and reserve stronger color for meaningful series, states, and actions. A black-and-gray treatment is one possible response, not a ban on branded color, gradients, glass, or light themes.
+1. **Reduce competing surface effects.** When broad purple-blue gradients, glow, or glass obscure financial or operational content, identify which treatment competes with meaning and rebalance color, surface effects, and hierarchy from the actual brand, content, and task. Keep strong color where it carries brand, series, state, or action meaning. A black-and-gray treatment is one possible response, not a neutral-base default or a ban on branded color, gradients, glass, or light themes.
 2. **Remove decorative hype from metrics.** Replace emoji and exaggerated punctuation such as `+12%!!` with a readable value and a valid comparison such as `+12% vs last month`. Keep meaningful icons and accessible labels; punctuation alone does not prove poor design.
 3. **Write operational copy.** Prefer the actual reporting period, metric name, unit, and comparison basis over promotional greetings or excitement. Distinguish percentage change from percentage-point change, and month-over-month from year-over-year. A named month is an example, not a reporting period to hard-code.
 4. **Simplify component framing.** When pills, badges, and oversized radii all compete, reuse the project's ordinary card geometry, restrained borders, and fewer status decorations. Preserve genuine tags, filters, severity markers, and adequate interaction targets. Quiet separators must not erase boundaries needed to identify controls or understand data.
@@ -16,7 +16,7 @@ Use this critique lens for requests to remove an "AI look," correct generic gene
 
 Apply these questions only to the changed surface. The suggested corrections are candidates when a treatment harms the task, not automatic replacements.
 
-1. Do large purple-blue gradients, glow, or glass compete with content? Try neutral surfaces with restrained semantic color, while retaining intentional brand treatment that remains readable.
+1. Do large purple-blue gradients, glow, or glass compete with content? Reassign color and effect weight from the actual brand, content, and task; keep intentional brand and semantic treatment that remains readable instead of automatically replacing it with a neutral base.
 2. Do emoji, repeated punctuation, or promotional welcome copy compete with business meaning? Use neutral operational copy and the actual period or comparison basis.
 3. Do pills, colored badges, and oversized corners all demand attention? Consolidate them into project radii, restrained borders, and a few meaningful status markers while keeping control and status semantics.
 4. Is the displayed data specific and credible? Check amounts, currency, periods, comparison basis, and plan or member counts against the source. Never manufacture production values.
@@ -47,7 +47,7 @@ When color itself is the reported problem, diagnose the changed surface before r
 1. Identify the actual failure: a muddy gradient, a vibrating boundary between similarly strong colors, merged adjacent shapes, a missing focus boundary, or an accent that overwhelms the task.
 2. Preserve existing brand and semantic tokens first. Candidate repairs include choosing adjacent hues, inserting an intentional intermediate stop, declaring the interpolation color space, adding a neutral separator, outlining one shape, or reducing the accent's area.
 3. Inspect color and grayscale at the real component size, in supported themes, and across the states that matter. Measure actual text, control, focus, and graphical-object contrast rather than judging a palette swatch alone.
-4. Treat numeric suggestions as contextual starting points: a `1–4 px` neutral divider, a `1–2 px` outline, or an accent occupying roughly `5–15%` of a composition can separate roles. A `60/30/10` distribution can help describe hierarchy, but it is not a layout quota or a reason to override the product's palette.
+4. If the diagnosed boundary or silhouette fault calls for local geometry, a `1–4 px` divider or `1–2 px` outline is an adjustable component-level starting point, not a palette rule or acceptance quota. Derive color area and visual weight from the [brand-color method](brand-identity-system.md#brand-color-system), content, and actual composition rather than a fixed ratio.
 
 Use the actual browser or platform renderer when gradients matter; interpolation behavior depends on the chosen color space and implementation. [CSS Color 4](https://www.w3.org/TR/css-color-4/#interpolation-space) defines the relevant web interpolation concepts. This section is an independent synthesis, includes no source media, and does not claim that a target surface was rendered or accepted.
 
