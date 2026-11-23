@@ -15,7 +15,7 @@ The skill does not impose a house aesthetic, framework, component library, or an
 ## What is included
 
 - [`SKILL.md`](SKILL.md): the core workflow and its routing rules.
-- [`references/technology-selection.md`](references/technology-selection.md): rendering, 2D/3D, motion, canvas, media, WebGPU, card-carousel selection, and interaction-layer choices.
+- [`references/technology-selection.md`](references/technology-selection.md): rendering, 2D/3D, motion, canvas, media, WebGPU, card-carousel selection, six bounded aesthetic-web candidates, and interaction-layer choices.
 - [`references/webgpu-shader-notes.md`](references/webgpu-shader-notes.md): typed WGSL boundaries, explicit context/frame ownership, measured delivery budgets, and mock-versus-real-pixel evidence.
 - [`references/motion-description-vocabulary.md`](references/motion-description-vocabulary.md): turns conversational motion language into testable behavior contracts.
 - [`references/component-motion-tokens.md`](references/component-motion-tokens.md): maps component transitions to semantic motion tokens.
@@ -210,6 +210,7 @@ A build, screenshot, generated component, static HTML file, or passing unit test
 | UI anatomy sheet, redline, measured specification, or structural-explainer film | [`dimensional-drawing-specs.md`](references/dimensional-drawing-specs.md) | Variable-based drawing from real measurements, visible unknowns, closed formulas, and an inspected delivery render |
 | Persistent upload, timer, media, call, delivery, recording, build, score, approval, or concurrent activity surface | [`islandcn-activity-stack.md`](references/islandcn-activity-stack.md) | Stable activity identity, compact, minimal, and expanded states, truthful lifecycle, interruption, concurrency, and accessible controls |
 | Rendering, 2D/3D, generated media, glass, scroll video, or advanced interaction choice | [`technology-selection.md`](references/technology-selection.md) | Chosen layer, important constraint, dependency/asset boundary, runtime proof |
+| Aesthetic web, immersive 3D, liquid-metal logo, refractive glass, flowing gradient, or canvas-shader direction | [`technology-selection.md#aesthetic-web-effects`](references/technology-selection.md#aesthetic-web-effects) | Only justified effects, compatible ownership, exact license boundaries, and target-runtime accessibility/performance evidence |
 | Card carousel, ring-depth showcase, 3D carousel, image sequence, or dense card comparison | [`technology-selection.md#card-carousel-selection`](references/technology-selection.md#card-carousel-selection) | A task-led form choice, corrected source parameters when ring depth is selected, accessible navigation, reduced motion, and measured target-device evidence |
 | WebGPU, WGSL, custom shader, vgpu, or GPU pixel-regression work | [`webgpu-shader-notes.md`](references/webgpu-shader-notes.md) | A justified GPU route, typed boundary, explicit context/frame owner, measured delivery budget, and separate mock versus real-pixel evidence |
 | Chart selection or presentation | [chart-selection-and-presentation.md](references/chart-selection-and-presentation.md) | One encoding justified by the reader's question and data relationship, with truthful scales, structured detail, and target-runtime acceptance |

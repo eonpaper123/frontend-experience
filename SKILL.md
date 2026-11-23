@@ -65,6 +65,8 @@ For a new or substantially revised responsive type system, read [references/resp
 
 For popup or overlay selection—Modal, Drawer, Toast, Dropdown, Popover, or Tooltip—read [references/six-popup-types.md](references/six-popup-types.md). Choose by task, interruption, and interaction semantics; visual shape does not determine modality or keyboard behavior.
 
+For an aesthetic web brief, liquid-metal logo treatment, glass interface, flowing color background, or other substantial visual-motion direction, read [the six visual and motion candidates](references/technology-selection.md#aesthetic-web-effects). Map the requested effect to a compatible implementation and its actual license, select only the hero effects that serve the content, and reuse the existing project route. This reference is not an installation list, does not require all six candidates, and does not treat visible source as permissively licensed.
+
 For `Liquid Glass`, `glassmorphism`, frosted glass, translucent navigation, or glass cards, read [the glass-material selection recipe](references/technology-selection.md#select-glass-materials-by-mechanism). Distinguish native platform material, CSS backdrop blur, and real refraction before choosing an implementation; keep the existing platform and let content, state, and contrast outrank the effect.
 
 For a Glass Ruler, sampled refraction, dispersion, Fresnel response, SwiftUI/Metal sampling, or an equivalent web shader, also read the [Glass Ruler appendix](references/reference-first-ui.md#glass-ruler). It records coordinate, sampling, accessibility, and evidence boundaries; it is not a default UI material or a tested component.
